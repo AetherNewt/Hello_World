@@ -1,4 +1,4 @@
-def hi:
+def hi():
 	return "Hello World, from python!"
 
-print(hi)
+print(hi())
