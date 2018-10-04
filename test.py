@@ -1,6 +1,5 @@
-import sys
-import HelloWorld
+from HelloWorld import hi
 
 
 def test_hi():
-    assert hi() == "Hello World, from python!"
+    assert HelloWorld.hi() == "Hello World, from python!"
