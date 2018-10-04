@@ -1,9 +1,7 @@
 import sys
-sys.path.insert(0, './src')
-import * from HelloWorld.py
+import * from HelloWorld
 
 
 def test_hi():
-    assert hi() == "Hello World, from python!":
-
+    assert hi() == "Hello World, from python!"
 
