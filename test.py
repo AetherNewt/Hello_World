@@ -1,5 +1,5 @@
 import sys
-import HelloWorld from *
+import HelloWorld
 
 
 def test_hi():
