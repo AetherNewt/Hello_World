@@ -1,0 +1,12 @@
+{% load static %}	
+<link type="text/css" rel="stylesheet" href="{% static 'Footer.css' %}">
+
+
+<div class="footer">
+	<table><tr valign="top">
+		<td>{% include 'CRC_APP/FooterElements/australianBranches.html' %}</td>
+		<td>{% include 'CRC_APP/FooterElements/rentalInfo.html' %}</td>
+		<td>{% include 'CRC_APP/FooterElements/customerSupport.html' %}</td>
+		<td>{% include 'CRC_APP/FooterElements/usefulLinksAuthenticated.html' %}</td>
+	</tr></table>
+</div>

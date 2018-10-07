@@ -1,0 +1,88 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block extrahead %}
+<link type="text/css" rel="stylesheet" href="/static/EditCarAvalibility.css">
+<link type="text/css" rel="stylesheet" href="/static/check-radio.css">
+<link type="text/css" rel="stylesheet" href="/static/EditCarAvalibility.css">
+<link rel="stylesheet" href="http://cdn.jsdelivr.net/fontawesome/4.3.0/css/font-awesome.min.css">
+<script src='/static/EditCarAvaliability.js'></script>
+{%endblock%} 
+{% block title %}Car Availibility{%endblock%} 
+{% block content %} 
+
+<div class='container fill'>
+    <div id='form'>
+        {% if result %}
+            <p id='result-message'>{{result}}</p>
+        {% endif %}
+        <form action='/CRC_APP/EditCarAvailablity' method="POST">
+            {% csrf_token %}
+            <div class='parent'>
+                <h2 class='heading'>Car ID:</h2>
+                {{form.carID}}
+            </div>
+            <div class=car>
+                <h2>Car Assessment</h2>
+                <h3 id='car-id'> </h3>
+            </div>
+            <div id='car-selection'>
+                <div class='form-check'>
+                    <div class='parent'>
+                        <h5 class='option'>Available</h5>
+                        <div class='radio-yes'>
+                            <label class="Form-label--tick">
+                                {% for radio in form.Avalible %}
+                                    {%if radio.id_for_label == 'id_Avalible_0'%}
+                                        {{ radio.tag }}
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="Form-label-text">Yes</span>
+                            </label>
+                        </div>
+                        <div class='radio-no'>
+                            <label class="Form-label--tick">
+                                {% for radio in form.Avalible %}
+                                    {%if radio.id_for_label == 'id_Avalible_1'%}
+                                        {{ radio.tag }}
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="Form-label-text">No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class='form-check'>
+                    <div class='parent'>
+                        <h5 class='option'>RoadWorthy</h5>
+                        <div class='radio-yes'>
+                            <label class="Form-label--tick">
+                                {% for radio in form.RoadWorthy %}
+                                    {%if radio.id_for_label == 'id_RoadWorthy_0'%}
+                                        {{ radio.tag }}
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="Form-label-text">Yes</span>
+                            </label>
+
+                        </div>
+                        <div class='radio-no'>
+                            <label class="Form-label--tick">
+                                {% for radio in form.RoadWorthy %}
+                                    {%if radio.id_for_label == 'id_RoadWorthy_1'%}
+                                        {{ radio.tag }}
+                                    {% endif %}
+                                {% endfor %}
+                                <span class="Form-label-text">No</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class='clearfix'>
+                    <button type="submit" id='submit-btn' class="float-right btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,101 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block extrahead %}
+<link type="text/css" rel="stylesheet" href="{% static 'BranchDetails.css' %}"> 
+<script src="{% static 'SortTable.js' %}"></script>
+{%endblock%} 
+{% block title %}Car Recomendation{%endblock %} 
+{% block content %}
+<div class='container'>
+	<form method='POST'>
+		{% csrf_token %}
+		<div class="input-group mb-3">
+			<div class="input-group-prepend">
+				<label class="input-group-text" for="inputGroupSelect01">Terrain type: </label>
+			</div>
+			{{form.TerrainType}}
+		</div>
+		<div class="row no-pad">
+			<div class="col-sm-2 no-pad">
+				<label id="priceLabel" class="input-group-text">Expensive</label>
+			</div>
+			<div class="col-sm-10 no-pad">
+				<div class="slidecontainer">
+					<input type="range" min="1" max="3" value="{{form.Price.value}}" class="slider" id="priceSlider"> {{form.Price}}
+					</input>
+				</div>
+			</div>
+		</div>
+		<div class="row no-pad">
+			<div class="col-sm-2 no-pad">
+				<label id="seatLabel" class="input-group-text"></label>
+			</div>
+			<div class="col-sm-10 no-pad">
+				<div class="slidecontainer">
+					<input type="range" min="1" max="15" value="{{form.Seats.value}}" class="slider" id="seatSlider"> {{form.Seats}}
+					</input>
+				</div>
+			</div>
+		</div>
+		<div class='input-group mb-3'>
+			<button class="btn btn-success" type="submit">Search</button>
+		</div>
+	</form>
+
+	{% if results %}
+	<h2 style="color:white;">Results: </h2>
+	<table id="resultsTable" , style="width:100%;">
+		<tr>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(0)">Car Make</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(1)">Car Series</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(2,'float')">Car Year</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(3,'float')">Seat Capacity</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(4)">Drive</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(5,'float')">Wheal Base</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(6)">Location</button></th>
+			<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(7,'float')">Price New</button></th>
+		</tr>
+
+		{% for row in results %}
+		<tr>
+			{% for val in row %}
+			<td>{{val}}</td>
+			{% endfor %}
+		</tr>
+		{% endfor %}
+
+	</table>
+	{% endif %}
+</div>
+<script>
+	var prices = {
+		"1": "Cheap",
+		"2": "Average",
+		"3": "Expensive",
+		1: "Cheap",
+		2: "Average",
+		3: "Expensive"
+	};
+	var priceSlider = document.getElementById("priceSlider");
+	var priceOutput = document.getElementById("priceLabel");
+	var priceForm = document.getElementById("priceForm");
+	priceOutput.innerHTML = prices[priceSlider.value];
+	priceForm.value = priceSlider.value;
+
+
+	priceSlider.oninput = function () {
+		priceForm.value = this.value;
+		priceOutput.innerHTML = prices[this.value];
+	}
+
+	var seatSlider = document.getElementById("seatSlider");
+	var seatOutput = document.getElementById("seatLabel");
+	var seatForm = document.getElementById("seatForm");
+	seatForm.value = seatSlider.value;
+	seatOutput.innerHTML = "Minimum Seats: " + seatSlider.value;;
+	seatSlider.oninput = function () {
+		seatForm.value = this.value;
+		seatOutput.innerHTML = "Minimum Seats: " + this.value;
+	}
+</script>
+{% endblock %}

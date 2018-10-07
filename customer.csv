@@ -1,0 +1,108 @@
+Customer_ID,Customer_Name,Customer_Phone,Customer_Addresss,Customer_Brithday,Customer_Occupation,Customer_Gender
+11010,Jacquelyn S,1 (11) 543 535-016*,7800 Corrinne Court,16/02/1968,Labour,M  
+11011,Curtis L,1 (11) 543 535-011*,1224 Shoenic,14/11/1967,Labour,M  
+11012,Lauren W,717-535-016*,4785 Scott Street,28/01/1972,Labour,F  
+11013,Ian J,817-535-018*,7902 Hudson Ave.,16/08/1972,Labour,M  
+11014,Sydney B,431-535-015*,9011 Tank Drive,19/05/1972,Labour,M  
+11015,Chloe Y,208-535-014*,244 Willow Pass Road,10/02/1983,Labour,F  
+11016,Wyatt H,135-535-017*,9666 Northridge Ct.,18/04/1983,Labour,M  
+11017,Shannon W,1 (11) 543 535-019*,7330 Saddlehill Lane,16/06/1948,Labour,M  
+11018,Clarence R,1 (11) 543 535-013*,244 Rivewview,19/10/1948,Labour,F  
+11019,Luke L,262-535-011*,7832 Landing Dr,10/03/1982,Labour,M  
+11050,Alan Z,1 (11) 543 535-013*,2741 Gainborough Dr.,10/09/1955,Labour,F  
+11051,Daniel J,1 (11) 543 535-015*,8085 Sunnyvale Avenue,14/08/1955,Labour,F  
+11052,Heidi L,1 (11) 543 535-016*,2514 Via Cordona,10/08/1955,Labour,F  
+11053,Ana P,859-535-011*,1660 Stonyhill Circle,10/08/1984,Labour,M  
+11054,Deanna M,1 (11) 543 535-019*,5825 B Way,20/03/1956,Labour,M  
+11055,Gilbert R,1 (11) 543 535-012*,8811 The Trees Dr.,15/03/1956,Labour,F  
+11056,Michele N,1 (11) 543 535-017*,5464 Janin Pl.,13/04/1957,Labour,M  
+11057,Carl A,1 (11) 543 535-018*,6930 Lake Nadine Place,21/10/1957,Labour,F  
+11058,Marc D,1 (11) 543 535-014*,6645 Sinaloa,10/04/1958,Labour,F  
+11059,Ashlee A,1 (11) 543 535-011*,8255 Highland Road,13/04/1958,Labour,F  
+11111,Meredith G,1 (11) 543 535-017*,7610 Northridge Ct.,13/02/1966,Labour,M  
+11112,Crystal W,1 (11) 543 535-013*,2773 Kirkwood Dr,19/09/1966,Labour,F  
+11113,Micheal B,1 (11) 543 535-013*,596 Marfargoa Drive,13/02/1966,Labour,M  
+11114,Leslie M,1 (11) 543 535-011*,7941 Cristobal,18/05/1966,Labour,M  
+11115,Alvin C,1 (11) 543 535-019*,7759 Azalea Avenue,21/02/1966,Labour,M  
+11116,Clinton C,1 (11) 543 535-018*,7943 Cunha Ct.,10/10/1966,Labour,M  
+11117,April D,1 (11) 543 535-018*,485 Ash Lane,13/02/1965,Labour,F  
+11119,Evan J,1 (11) 543 535-018*,4157 Sierra Ridge,20/04/1939,Retiree,F  
+11150,Russell S,1 (11) 543 535-019*,4755 Easley Drive,25/03/1945,Retiree,F  
+11151,Melinda G,1 (11) 543 535-011*,805 Rainier Dr.,15/02/1946,Labour,F  
+11152,James W,355-535-015*,6827 Seagull Court,20/01/1980,Labour,F  
+11153,Angela J,847-535-011*,8877 Weatherly Drive,13/06/1980,Labour,F  
+11154,Megan W,918-535-018*,6898 Holiday Hills,13/08/1980,Labour,F  
+11155,Hunter R,891-535-012*,8356 Mori Court,16/01/1980,Labour,F  
+11156,Maria R,158-535-019*,9452 Mariposa Ct.,10/02/1980,Labour,M  
+11157,Hannah L,974-535-017*,1832 Preston Ct.,23/06/1979,Labour,M  
+11158,Jason W,694-535-017*,6771 Bundros Court,18/10/1979,Labour,F  
+11159,Brianna H,319-535-018*,6793 Bonifacio St.,20/09/1979,Labour,F  
+11210,Edward W,229-535-011*,1039 Adelaide St.,18/06/1952,Researcher,M  
+11213,Stephanie M,293-535-015*,5514 Grant Street,24/05/1953,Researcher,M  
+11214,Charles M,389-535-011*,2719 Little Dr,10/11/1953,Researcher,F  
+11215,Ana P,446-535-013*,3114 Arlington Way,13/06/1954,Researcher,M  
+11216,Jasmine T,939-535-013*,8328 San Francisco,10/05/1954,Researcher,F  
+11217,Natalie A,300-535-015*,6592 Bent Tree Lane,23/02/1954,Researcher,F  
+11218,Olivia B,414-535-014*,3964 Stony Hill Circle,23/09/1954,Researcher,M  
+11219,Charles C,755-535-011*,6871 Bel Air Dr.,11/12/1954,Researcher,F  
+11250,Shannon L,1 (11) 543 535-011*,4185 Keywood Ct.,21/03/1959,Manager,F  
+11251,Xavier L,243-535-011*,9245 Dantley Way,14/07/1936,Retiree,M  
+11252,Nicholas T,377-535-014*,504 O St.,10/06/1936,Retiree,M  
+11253,Jose H,712-535-013*,5703 Donald Dr.,18/02/1937,Retiree,M  
+11254,Johnathan V,494-535-016*,9430 Versailles Pl,13/03/1937,Retiree,M  
+11255,Colin L,599-535-013*,6083 San Jose,14/04/1937,Retiree,F  
+11256,Katelyn H,249-535-011*,7496 Deerfield Dr.,10/09/1937,Retiree,M  
+11257,Jacqueline P,796-535-011*,4076 Northwood Dr,16/01/1937,Retiree,F  
+11258,Xavier H,559-535-014*,2707 Virgil Street,18/06/1937,Retiree,F  
+11259,Victoria S,230-535-013*,3623 Barquentine Court,10/03/1969,Manager,M  
+11310,Erin S,233-535-016*,7541 Black Point Pl,19/07/1957,Manager,M  
+11311,Gabrielle L,783-535-017*,8619 Parkside Dr.,14/08/1957,Manager,F  
+11312,Sara R,296-535-017*,7375 Kipling Court,13/04/1957,Manager,M  
+11313,Trevor J,120-535-012*,4697 Yosemite Dr.,10/02/1957,Manager,F  
+11314,Mya F,522-535-014*,8439 Rio Grande Drive,13/12/1957,Manager,F  
+11315,Hailey W,767-535-015*,6321 Maya,13/10/1957,Manager,F  
+11316,Luke A,786-535-013*,419 Deermeadow Way,20/11/1957,Manager,F  
+11317,Victoria R,663-535-019*,9268 Keller Ridge,20/09/1956,Manager,M  
+11318,Jessica W,702-535-018*,1652 Willcrest Circle,16/10/1956,Manager,M  
+11319,Jade B,819-535-016*,8119 Northridge Ct,10/04/1941,Retiree,F  
+11350,Cara Z,1 (11) 543 535-011*,7280 Greendell Pl,24/01/1941,Retiree,M  
+11351,Anne R,1 (11) 543 535-014*,7113 Eastgate Ave.,16/04/1943,Retiree,M  
+11352,Raymond R,1 (11) 543 535-013*,"24, impasse Ste-Madeleine",10/03/1944,Retiree,F  
+11353,Carrie O,1 (11) 543 535-011*,1883 Cowell Rd.,23/06/1945,Retiree,M  
+11354,Deanna S,1 (11) 543 535-014*,Dunckerstr 22525,13/02/1946,Manager,M  
+11355,Roberto G,1 (11) 543 535-012*,3545 Chickpea Ct.,18/12/1946,Manager,M  
+11356,Terrence C,1 (11) 543 535-018*,6613 Thornhill Place,10/05/1984,Manager,F  
+11357,Ramon Y,1 (11) 543 535-014*,3245 Vista Oak Dr.,13/03/1983,Manager,M  
+11358,Cynthia M,1 (11) 543 535-018*,6757 Pamplona Ct.,23/11/1982,Manager,F  
+11359,Jarrod P,1 (11) 543 535-015*,7657 H St.,14/09/1982,Manager,M  
+11410,Maurice G,1 (11) 543 535-017*,"15, avenue de la Gare",15/08/1972,Manager,M  
+11411,Devin R,1 (11) 543 535-017*,Postenweg 2428,21/02/1958,Manager,M  
+11412,Sydney B,1 (11) 543 535-015*,Postfach 99 92 92,19/04/1958,Manager,M  
+11413,Megan S,1 (11) 543 535-011*,8192 Seagull Court,25/04/1958,Manager,F  
+11414,Ian R,1 (11) 543 535-011*,726 W. Buchanan Rd.,28/03/1958,Manager,M  
+11415,Randy S,1 (11) 543 535-014*,Ro?str 5538,15/06/1948,Manager,M  
+11416,Katrina B,1 (11) 543 535-015*,"8205, rue Malar",29/03/1949,Manager,F  
+11417,Lacey Z,1 (11) 543 535-017*,"4, rue de Linois",16/02/1949,Manager,F  
+11418,Rafael H,1 (11) 543 535-015*,Zeiter Weg 7765,19/02/1949,Manager,M  
+11419,Kyle S,1 (11) 543 535-017*,9381 Alpine Rd.,28/02/1949,Manager,M  
+11459,Tasha D,1 (11) 543 535-017*,9627 Kendall Rd,23/10/1976,Nurse,M  
+11510,Seth R,199-535-014*,5989 Concord Ave,23/07/1957,Nurse,M  
+11511,Caleb P,786-535-013*,2324 Cherry Street,24/06/1957,Nurse,F  
+11512,Natalie C,178-535-014*,3481 Broadmoor Drive,23/08/1958,Nurse,M  
+11513,Alyssa H,805-535-018*,5780 Conifer Terrace,10/09/1958,Nurse,M  
+11514,Dalton D,994-535-015*,8033 Danesta Dr.,10/04/1958,Nurse,F  
+11515,Shannon H,458-535-011*,4679 Duke Way,15/02/1958,Nurse,F  
+11516,Mya G,211-535-011*,8826 Fine Drive,13/10/1958,Nurse,F  
+11517,Katherine B,802-535-013*,8761 Dancing Court,10/06/1958,Nurse,F  
+11518,Edward W,446-535-017*,2747 Carmel Dr.,20/05/1959,Nurse,F  
+11519,Jerome N,934-535-019*,9537 Ridgewood Drive,20/03/1959,Nurse,M  
+11535,Alexandria H,1 (11) 543 535-018*,"11, rue de la Cavalerie",18/07/1930,Retiree,M  
+11550,Deb T,1 (11) 543 535-012*,7553 Harness Circle,18/08/1972,Nurse,M  
+11551,Shannon A,1 (11) 543 535-015*,"268, avenue de l?Europe",15/05/1971,Nurse,F  
+11552,Eddie R,1 (11) 543 535-015*,Heiderplatz 662,10/05/1971,Nurse,M  
+11553,Sharon L,1 (11) 543 535-011*,6804 Coldwater Drive,19/09/1971,Nurse,F  
+11554,Sydney S,1 (11) 543 535-019*,"88, avenue de l? Union Centrale",18/09/1930,Retiree,F  
+11556,Lucas E,1 (11) 543 535-015*,3663 A St.,24/05/1971,Nurse,M  
+11557,Felicia R,1 (11) 543 535-019*,9557 Steven Circle,25/01/1971,Nurse,M  
+11558,Ivan M,1 (11) 543 535-019*,5086 Nottingham Place,11/08/1971,Nurse,M  
+11559,Frederick S,1 (11) 543 535-011*,Rotth?user Weg 636,26/12/1971,Nurse,M  

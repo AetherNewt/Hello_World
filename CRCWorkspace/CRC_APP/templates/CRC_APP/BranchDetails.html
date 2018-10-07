@@ -1,0 +1,39 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block extrahead %}
+<link type="text/css" rel="stylesheet" href="{% static 'BranchDetails.css' %}">
+{%endblock%}
+
+{% block title %}Branch Details{% endblock %}
+
+{% block content %}
+<div class='container root-container'>
+    <form method='POST'>
+        {% csrf_token %}
+        <div class='form-container'>
+            {{ form }}
+            <button class="btn btn-success" type="submit">Search</button>
+        </div>
+    </form>
+    {% if error %}
+    <p style="font-size: 20px;color: red;">{{ error }}</p>
+    {% endif %}
+
+    {% if Branch %}
+    <div class='branch-containers'>
+        <ul class='branch-group list-group'>
+            {% for data in Branch %}
+            <li class='list list-group-item'>
+                <h3>{{data.Name}}</h3>
+                <h4>Branch Address: {{data.Address}},{{data.City}},{{data.State}},AUS</h4>
+                <h5>Phone Number: {{data.Contact}}</h5>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+    
+</div>
+
+{%endblock%}
+

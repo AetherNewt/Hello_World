@@ -1,0 +1,12 @@
+<!-- Example single danger button -->
+<div style="width:100%;" class="btn-group">
+  <button style="width:100%;" type="button" class="btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Age</button>
+  <button type="button" class="btn dropdown-toggle dropdown-toggle-split" onclick="sortTable(3,'float')">
+    <span class="sr-only">Toggle Dropdown</span>
+  </button>
+  <div class="dropdown-menu">
+    <label class="radio"><input id="18" onclick="filterTable()" type="checkbox" name="optAge" checked>18-25</label>
+	<label class="radio"><input id="26" onclick="filterTable()" type="checkbox" name="optAge" checked>26-40</label>
+	<label class="radio"><input id="41" onclick="filterTable()" type="checkbox" name="optAge" checked>41-55</label>
+	<label class="checkbox"><input id="56" onclick="filterTable()" type="checkbox" name="optAge" checked>56+</label>
+</div>

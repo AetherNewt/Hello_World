@@ -1,0 +1,1411 @@
+{
+  "id": "05779edf-8a64-48b2-af4b-b601c3fa466d",
+  "version": "1.1",
+  "name": "CRC_AppTestCases",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "5f5aa108-16c9-4a56-bf8a-68bb6f824691",
+    "name": "BranchOverviewTestElementsExists",
+    "commands": [{
+      "id": "e5994a88-95cf-43c8-b14e-be975954cc12",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/CRC_APP/BranchOverview/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fff12d67-8013-426c-8f0f-ad642732d780",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["//input[@id='id_Branch']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9dcfe34-f5e9-49f1-b9a3-413644d970d2",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["//input[@id='id_Branch']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f867a451-e85e-4151-bb8b-6f3fb2b939db",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "747da87e-c002-4285-a676-2482fd5d9c9d",
+    "name": "BranchOverviewTestValidInput",
+    "commands": [{
+      "id": "51ceef1a-1fa8-4834-aa11-df2abe903503",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/CRC_APP/BranchOverview/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b79ff06-3e01-44f3-8378-415c82b9bd57",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["xpath=//input[@id='id_Branch']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1aabac-add6-4839-aaea-77aec3af99d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["xpath=//input[@id='id_Branch']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Sydney_store"
+    }, {
+      "id": "7ca21f3d-fed4-4aa9-bd1a-80bab651749d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca81787c-e61a-44a7-8937-29a338ef1949",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td",
+      "targets": [
+        ["css=td", "css"],
+        ["//table[@id='CarReturnDetails']/tbody/tr[2]/td", "xpath:idRelative"],
+        ["//td", "xpath:position"]
+      ],
+      "value": "18"
+    }, {
+      "id": "434ac273-465d-40c6-ae60-190e2471cc5c",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='CarReturnDetails']/tbody/tr[3]/td",
+      "targets": [
+        ["//table[@id='CarReturnDetails']/tbody/tr[3]/td", "xpath:idRelative"],
+        ["//tr[3]/td", "xpath:position"]
+      ],
+      "value": "58"
+    }]
+  }, {
+    "id": "01dce7ec-9b50-40d8-81c9-03702606730c",
+    "name": "Login",
+    "commands": [{
+      "id": "abfeed30-7e78-4c1d-b0f8-3d7939a1e5c0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/accounts/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3788eeb-e416-4e74-bce4-23d0a8780140",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Log In",
+      "targets": [
+        ["linkText=Log In", "linkText"],
+        ["//a[contains(text(),'Log In')]", "xpath:link"],
+        ["//a[contains(@href, '/accounts/login/?next=/accounts/login/')]", "xpath:href"],
+        ["//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2dd8036-b901-498d-a40a-057616e4c3b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css"],
+        ["//input[@id='id_username']", "xpath:attributes"],
+        ["//div[@id='content']/form/div/p/input", "xpath:idRelative"],
+        ["//p/input", "xpath:position"]
+      ],
+<<<<<<< HEAD
+      "value": "test-user"
+=======
+      "value": "boss"
+>>>>>>> VehicleHireAnalysis
+    }, {
+      "id": "4aa05c68-b967-48de-9ecf-2d6d8e82b55a",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css"],
+        ["//input[@id='id_password']", "xpath:attributes"],
+        ["//div[@id='content']/form/div/p[2]/input", "xpath:idRelative"],
+        ["//p[2]/input", "xpath:position"]
+      ],
+<<<<<<< HEAD
+      "value": "test-user-password"
+=======
+      "value": "boss1234"
+>>>>>>> VehicleHireAnalysis
+    }, {
+      "id": "00da864f-a70e-4606-b8bf-e481e5f85cce",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["xpath=//input[@value='login']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+<<<<<<< HEAD
+    }, {
+      "id": "70726385-3f4b-4be7-8d9d-d04c2b8f0d6e",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+=======
+>>>>>>> VehicleHireAnalysis
+    }]
+  }, {
+    "id": "04b713b2-bf93-4728-bc17-b49398700339",
+    "name": "Logout",
+    "commands": [{
+      "id": "6816b2b5-d8c8-4a28-9fc5-a64962c6d87e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log Out",
+      "targets": [
+        ["linkText=Log Out", "linkText"],
+        ["//a[contains(text(),'Log Out')]", "xpath:link"],
+        ["//a[contains(@href, '/accounts/logout/?next=/accounts/login/')]", "xpath:href"],
+        ["//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+<<<<<<< HEAD
+    }, {
+      "id": "aaa428d4-2182-4553-adc6-5f9585bbbb2d",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+=======
+>>>>>>> VehicleHireAnalysis
+    }]
+  }, {
+    "id": "bd144fc9-aade-4a84-b9c1-e8e65e84e93e",
+    "name": "BranchDetailsTestElementsExist",
+    "commands": [{
+      "id": "4fce37c6-d6d8-47e8-a8dd-0326ca559bbd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "515d06e3-5e0b-4f7e-a79a-73810ef80e66",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["//select[@id='id_Suburb']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff1cceb1-8eea-42f1-9ef0-9243fd46e521",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6b661c3e-39f6-4c67-a310-62ee7f92aa31",
+    "name": "BranchDetailsTest_SingleElement_Tasmania",
+    "commands": [{
+      "id": "78ea973c-ceba-4679-b192-07b2bbfe183c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a916a2a-641c-47ac-adb6-8af483047d53",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=Tasmania"
+    }, {
+      "id": "f56ddd5f-6c20-43a2-9240-81bafa4aaf22",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"Tasmania\"]",
+      "targets": [
+        ["css=option[value=\"Tasmania\"]", "css"],
+        ["xpath=//option[@value='Tasmania']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[4]", "xpath:idRelative"],
+        ["xpath=//option[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc307dfe-a436-4bc6-876a-a3a69bf62203",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a19dfbf5-4080-49f1-b693-f1b31e414166",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//div[@id='content']/div/div/ul/li/h3", "xpath:idRelative"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "Hobart_store"
+    }, {
+      "id": "cae947d7-6567-41ac-871c-17dfcf1ed6b2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css"],
+        ["//div[@id='content']/div/div/ul/li/h4", "xpath:idRelative"],
+        ["//h4", "xpath:position"]
+      ],
+      "value": "Branch Address: 636 Vine Hill Way,Hobart ,TAS,AUS"
+    }, {
+      "id": "ca3d4be8-9e23-4699-bdf0-1318e6708ae4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h5",
+      "targets": [
+        ["css=h5", "css"],
+        ["//div[@id='content']/div/div/ul/li/h5", "xpath:idRelative"],
+        ["//h5", "xpath:position"]
+      ],
+      "value": "Phone Number: 1 (11) 543 535-0182"
+    }]
+  }, {
+    "id": "5f698d32-fb8d-49e9-9b21-019bf818c755",
+    "name": "BranchDetailsTest_MultiElementResult",
+    "commands": [{
+      "id": "a709508e-f3c3-45a7-85df-9a78f1c8b4b0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76cfbc78-0856-415e-bd9b-f9948ecdcc1b",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//select[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbeef2fc-667a-4a03-8b1c-78b3696c7e1c",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=New South Wales"
+    }, {
+      "id": "2061e4eb-f0aa-4b18-aedc-7e0041a290a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"New South Wales\"]",
+      "targets": [
+        ["css=option[value=\"New South Wales\"]", "css"],
+        ["xpath=//option[@value='New South Wales']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26ab1f79-6b4d-4c32-bf71-d45b71106399",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "987a6b97-59bf-4ab5-96ec-fef0b2220e6d",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='content']/div/div/ul/li[2]/h3",
+      "targets": [
+        ["//div[@id='content']/div/div/ul/li[2]/h3", "xpath:idRelative"],
+        ["//li[2]/h3", "xpath:position"]
+      ],
+      "value": "Coffs Harbour_store"
+    }, {
+      "id": "1d0a82df-1735-473d-86bc-6929ab825232",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='content']/div/div/ul/li[3]/h3",
+      "targets": [
+        ["//div[@id='content']/div/div/ul/li[3]/h3", "xpath:idRelative"],
+        ["//li[3]/h3", "xpath:position"]
+      ],
+      "value": "Darlinghurst_store"
+    }]
+  }, {
+    "id": "6158ca4d-0e27-452b-b714-6d57ef9baa16",
+    "name": "BranchDetailsTest_NoStore_SouthAustralia",
+    "commands": [{
+      "id": "6e2ab41f-2b0c-40d3-be11-4a74ca5a95f7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95ad2943-92d1-4e9d-a03b-a4e5436b495b",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//select[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e542d5-b0fc-438d-82e6-df394e6fd9b3",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=Western Australia"
+    }, {
+      "id": "f5ba52f0-0ab1-4886-9a1c-3fa2eddb8d46",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"Western Australia\"]",
+      "targets": [
+        ["css=option[value=\"Western Australia\"]", "css"],
+        ["xpath=//option[@value='Western Australia']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[5]", "xpath:idRelative"],
+        ["xpath=//option[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fa02a34-f776-49da-8644-c1685a1c8c9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75784864-7aac-4b34-a4ea-beec9178010c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p",
+      "targets": [
+        ["css=p", "css"],
+        ["//div[@id='content']/div/p", "xpath:idRelative"],
+        ["//p", "xpath:position"]
+      ],
+      "value": "There are no branches in the state!"
+    }]
+  }, {
+    "id": "ad015756-be93-48eb-8290-b2cc3a4b3d64",
+    "name": "CarFeatureAnalysisTest_ElementsPresent",
+    "commands": [{
+      "id": "d412125b-4b9f-4bf9-a3fb-e5ad34660e53",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarFeatureAnalysis/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a6634a-0dcf-498e-860c-068dd55bcc0a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.radio-inline",
+      "targets": [
+        ["css=label.radio-inline", "css"],
+        ["//div[@id='content']/div/div/div/label", "xpath:idRelative"],
+        ["//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05ce2c56-5f96-4d6c-9ba7-cfa0265b0aba",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//div[@id='content']/div/div/div/label[2]",
+      "targets": [
+        ["//div[@id='content']/div/div/div/label[2]", "xpath:idRelative"],
+        ["//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "542964c5-ffb6-486a-99a4-4e616cef1252",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_CarFeature",
+      "targets": [
+        ["id=id_CarFeature", "id"],
+        ["name=CarFeature", "name"],
+        ["css=#id_CarFeature", "css"],
+        ["//select[@id='id_CarFeature']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d63e329-bf1f-41d2-9f82-b1199450a19a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_StoreSeach",
+      "targets": [
+        ["id=id_StoreSeach", "id"],
+        ["name=StoreSeach", "name"],
+        ["css=#id_StoreSeach", "css"],
+        ["//input[@id='id_StoreSeach']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8e2996-2f0d-4066-865c-2dbddad149bf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div[3]/button", "xpath:idRelative"],
+        ["//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+<<<<<<< HEAD
+    }, {
+      "id": "d9be0d92-2470-43c8-8bd9-e314efdf8037",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=svg",
+      "targets": [
+        ["css=svg", "css"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "86e9c561-23e2-46ac-a7f3-521aebc06e13",
+    "name": "VehicleDataComparisonTest_ElementsExist",
+    "commands": [{
+      "id": "fecc74be-d0dc-4f15-bb4f-340231fe10b9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/VehicleDataComparison/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e33f4208-4613-470d-9596-42927b29ff20",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "28e2403f-634d-405d-84e6-8c3fbf24e1fa",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "933c007f-42fa-4cd6-af0d-be8bbcbd31af",
+    "name": "CarRecommendationTest",
+    "commands": [{
+      "id": "d1b473ad-18af-46f6-be1e-d66a74a54b5d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarRecomendation/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bd49c5a0-d624-441e-8838-52f1244d54df",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_TerrainType",
+      "targets": [
+        ["id=id_TerrainType", "id"],
+        ["name=TerrainType", "name"],
+        ["css=#id_TerrainType", "css"],
+        ["//select[@id='id_TerrainType']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d354f286-8dfe-458c-9df8-3f77d86b0952",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=priceSlider",
+      "targets": [
+        ["id=priceSlider", "id"],
+        ["css=#priceSlider", "css"],
+        ["//input[@id='priceSlider']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div[2]/div[2]/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ef2e80d-7872-4d72-88f0-dc648efc7420",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=seatSlider",
+      "targets": [
+        ["id=seatSlider", "id"],
+        ["css=#seatSlider", "css"],
+        ["//input[@id='seatSlider']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "40af2e65-7031-49ca-8139-c64b5906a226",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div[4]/button", "xpath:idRelative"],
+        ["//div[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e23168a-46dd-42d5-a401-b5be9e3f6638",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-light",
+      "targets": [
+        ["css=button.btn.btn-light", "css"],
+        ["//button[@type='button']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/button", "xpath:idRelative"],
+        ["//th/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3165028-dccc-4c46-96c2-e05eccd951ea",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[2]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[2]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[2]/button", "xpath:idRelative"],
+        ["//th[2]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7a6953d4-a034-4e1a-8c0c-5524f29f4d72",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[3]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[3]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[3]/button", "xpath:idRelative"],
+        ["//th[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "41a28f42-5010-49c5-85cb-e127e6cdb1a4",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[4]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/button", "xpath:idRelative"],
+        ["//th[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15108ff8-989a-4770-8fc5-bb575d50283a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[5]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[5]/button", "xpath:idRelative"],
+        ["//th[5]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90fe8adc-26ca-45ce-b8b8-46c7e3cc2adb",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[6]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[6]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[6]/button", "xpath:idRelative"],
+        ["//th[6]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b206d929-e2fd-47e9-bf49-eb039bddddd0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[7]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[7]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[7]/button", "xpath:idRelative"],
+        ["//th[7]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d8cb9cae-258f-4d3e-b4d6-712c0bb49391",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=(//button[@type='button'])[8]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[8]/button", "xpath:idRelative"],
+        ["//th[8]/button", "xpath:position"]
+=======
+    }]
+  }, {
+    "id": "0876feee-fd29-4abe-8111-6a07fdc347f4",
+    "name": "CarFeatureAnalysis_defaults",
+    "commands": [{
+      "id": "4fd60531-a0ea-4f54-b510-c29a539d2665",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarFeatureAnalysis/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4fe39ff-30b2-44f4-ac9d-2a9eb35b4561",
+      "comment": "",
+      "command": "click",
+      "target": "css=label.radio-inline",
+      "targets": [
+        ["css=label.radio-inline", "css"],
+        ["xpath=//div[@id='content']/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7b99f3a-678a-405b-b55b-6507330e197c",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_CarFeature",
+      "targets": [
+        ["id=id_CarFeature", "id"],
+        ["name=CarFeature", "name"],
+        ["css=#id_CarFeature", "css"],
+        ["xpath=//select[@id='id_CarFeature']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0915f40b-570d-48c3-9a7c-1e7a82919414",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"CarMake\"]",
+      "targets": [
+        ["css=option[value=\"CarMake\"]", "css"],
+        ["xpath=//option[@value='CarMake']", "xpath:attributes"],
+        ["xpath=//select[@id='id_CarFeature']/option", "xpath:idRelative"],
+        ["xpath=//option", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c0e8310-66dc-429a-b4ab-3726ca70bb81",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b063a1a-0145-4deb-bf54-37d031a2a3f3",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+<<<<<<< HEAD
+    "id": "4889ca9b-ccc2-437b-817a-ce63c2ea6db5",
+    "name": "selecttable_structure",
+    "commands": [{
+      "id": "30514c0f-3508-4bd9-b243-028102bf63d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_TableSelection",
+      "targets": [
+        ["id=id_TableSelection", "id"],
+        ["name=TableSelection", "name"],
+        ["css=#id_TableSelection", "css"],
+        ["xpath=//select[@id='id_TableSelection']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e3e4fe0c-1209-429b-a9c4-d5e18113862d",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_TableSelection",
+      "targets": [],
+      "value": "label=Car"
+    }, {
+      "id": "b91fea1d-fbeb-4d21-b014-468e594b215f",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"car\"]",
+      "targets": [
+        ["css=option[value=\"car\"]", "css"],
+        ["xpath=//option[@value='car']", "xpath:attributes"],
+        ["xpath=//select[@id='id_TableSelection']/option[5]", "xpath:idRelative"],
+        ["xpath=//option[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02e9689a-1e24-4e11-aaaf-a6e63b357d9a",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [
+        ["id=id_TableSelection", "id"],
+        ["name=TableSelection", "name"],
+        ["css=#id_TableSelection", "css"],
+        ["//select[@id='id_TableSelection']", "xpath:attributes"],
+        ["//div[@id='content']/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "3139576b-b494-4079-945c-add4678afca8",
+    "name": "sqlquery",
+    "commands": [{
+      "id": "aa18a4e9-b7fc-4a0c-91e9-6cc3e370bba8",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/BranchManagement/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28f350f0-816e-4e47-9f35-a1e58afc78f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=sqltext",
+      "targets": [
+        ["id=sqltext", "id"],
+        ["name=CustomSQL", "name"],
+        ["css=#sqltext", "css"],
+        ["xpath=//textarea[@id='sqltext']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "97ff0fee-000b-4f73-8aea-37eb1a0b33d2",
+      "comment": "",
+      "command": "type",
+      "target": "id=sqltext",
+      "targets": [
+        ["id=sqltext", "id"],
+        ["name=CustomSQL", "name"],
+        ["css=#sqltext", "css"],
+        ["xpath=//textarea[@id='sqltext']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "select * from car"
+    }, {
+      "id": "cee508d3-b401-4abf-838f-c6c039b32c94",
+      "comment": "",
+      "command": "click",
+      "target": "id=search",
+      "targets": [
+        ["id=search", "id"],
+        ["css=#search", "css"],
+        ["xpath=//button[@id='search']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div[2]/button[2]", "xpath:idRelative"],
+        ["xpath=//button[2]", "xpath:position"]
+>>>>>>> VehicleHireAnalysis
+      ],
+      "value": ""
+    }]
+  }, {
+<<<<<<< HEAD
+    "id": "21582598-2e62-4bbe-bc09-dfd09b1c1922",
+    "name": "CarRecommendation_TestSort",
+    "commands": [{
+      "id": "b023ec13-e102-4913-a9d1-8ad4418bbf62",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarRecomendation/",
+      "targets": [
+        ["xpath=(//button[@type='button'])[4]", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/button", "xpath:idRelative"],
+        ["//th[4]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "27d142cb-2e74-4454-a26a-a80df8674e9b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[8]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//table[@id='resultsTable']/tbody/tr/th[8]/button", "xpath:idRelative"],
+        ["xpath=//th[8]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "45129abd-8418-4945-81fa-81f76d346f8b",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[8]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[8]", "xpath:idRelative"],
+        ["//td[8]", "xpath:position"]
+      ],
+      "value": "5203.00"
+    }, {
+      "id": "cf9c516d-39a9-4964-96bb-bb112f04f37a",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[41]/td[8]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[41]/td[8]", "xpath:idRelative"],
+        ["//tr[41]/td[8]", "xpath:position"]
+      ],
+      "value": "136500.00"
+    }, {
+      "id": "23a1781b-d701-4f97-a76c-1729e94f6efd",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=(//button[@type='button'])[8]",
+      "targets": [
+        ["xpath=(//button[@type='button'])[8]", "xpath:attributes"],
+        ["xpath=//table[@id='resultsTable']/tbody/tr/th[8]/button", "xpath:idRelative"],
+        ["xpath=//th[8]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2be16577-f449-4a41-ace0-fce563e2dc84",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[8]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[8]", "xpath:idRelative"],
+        ["//td[8]", "xpath:position"]
+      ],
+      "value": "136500.00"
+    }, {
+      "id": "2b40d6d2-9760-48cf-bc4e-ece5e5f95aae",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[41]/td[8]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[41]/td[8]", "xpath:idRelative"],
+        ["//tr[41]/td[8]", "xpath:position"]
+      ],
+      "value": " 5203.00"
+    }]
+  }, {
+    "id": "1d61a8d6-9de1-4c77-921a-105795e012c4",
+    "name": "CarRecommendation_DefaultPage",
+    "commands": [{
+      "id": "35c5f5b3-bcd3-4ba5-a099-e1f3fc57008f",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarRecomendation/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "160fba19-abe0-4634-aaaa-fb810f10f9c1",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[8]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[8]", "xpath:idRelative"],
+        ["//td[8]", "xpath:position"]
+      ],
+      "value": "83650.00"
+    }, {
+      "id": "dca8bc14-28da-4f60-9815-2b0d11dbe842",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[7]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[7]", "xpath:idRelative"],
+        ["//td[7]", "xpath:position"]
+      ],
+      "value": "Springwood_store"
+    }, {
+      "id": "1af79323-2fd3-41b2-ae08-1d7d815acc64",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[6]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[6]", "xpath:idRelative"],
+        ["//td[6]", "xpath:position"]
+      ],
+      "value": "2885mm"
+    }, {
+      "id": "16bbef2e-6085-40e6-b875-dc63fca6bb7f",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[5]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[5]", "xpath:idRelative"],
+        ["//td[5]", "xpath:position"]
+      ],
+      "value": "4WD"
+    }, {
+      "id": "d3ee9b8a-4b6d-40b2-9f6e-aeff302c8bd3",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[4]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[4]", "xpath:idRelative"],
+        ["//td[4]", "xpath:position"]
+      ],
+      "value": "7"
+    }, {
+      "id": "fbc50f0d-0c40-448c-a413-eb73804bc9c3",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[3]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["//td[3]", "xpath:position"]
+      ],
+      "value": "2006"
+    }, {
+      "id": "cbf11ea6-075d-4802-ad51-c6ea9984d0d1",
+=======
+    "id": "0041ca14-dc6b-438a-81ec-c2ada6cd5898",
+    "name": "VehicleDataComparisonTest",
+    "commands": [{
+      "id": "0a260369-91f2-4747-bff2-255391bf219b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb3dd87c-7b8a-4ede-ba02-bf507decb12d",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd0c736d-c51b-453f-a93b-482f81011770",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[12]/td",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[12]/td", "xpath:idRelative"],
+        ["//tr[12]/td", "xpath:position"]
+      ],
+      "value": "Bendigo_store"
+    }, {
+      "id": "c9ae073f-8688-41ad-b279-2d55ccf12147",
+>>>>>>> VehicleDataComparison
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[2]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["//td[2]", "xpath:position"]
+      ],
+<<<<<<< HEAD
+      "value": "HSE"
+    }, {
+      "id": "ba10600c-f5d6-4dc4-bf75-66f11c43a306",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td",
+      "targets": [
+        ["css=td", "css"],
+        ["//table[@id='resultsTable']/tbody/tr[2]/td", "xpath:idRelative"],
+        ["//td", "xpath:position"]
+      ],
+      "value": "LAND ROVER"
+=======
+    "id": "61ac8305-7a66-46c8-9ebc-5267518c6738",
+    "name": "Vehiclehairanalysisfilter_dates",
+    "commands": [{
+      "id": "c788780e-6f1d-49c3-8442-40230aef26b6",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/VehicleHireAnalysis/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9aebbe98-48fc-41bf-850c-ff01c0aa25d7",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Month",
+      "targets": [],
+      "value": "label=April"
+    }, {
+      "id": "9478a4bf-6fa3-41d7-9396-09c006b47b06",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"04\"]",
+      "targets": [
+        ["css=option[value=\"04\"]", "css"],
+        ["xpath=//option[@value='04']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Month']/option[4]", "xpath:idRelative"],
+        ["xpath=//option[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "587c1bcf-4c50-4879-9e84-6839ecc45038",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b7291ee-e4d4-411d-97ea-73c41c0fb9af",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Year",
+      "targets": [
+        ["id=id_Year", "id"],
+        ["name=Year", "name"],
+        ["css=#id_Year", "css"],
+        ["xpath=//select[@id='id_Year']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div[2]/select", "xpath:idRelative"],
+        ["xpath=//div[2]/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6a1765ae-fc5b-413f-a450-1e79311ee46b",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Year",
+      "targets": [],
+      "value": "label=2006"
+    }, {
+      "id": "ac8eb916-34bc-497e-8851-d48755ac005e",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"2006\"]",
+      "targets": [
+        ["css=option[value=\"2006\"]", "css"],
+        ["xpath=//option[@value='2006']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Year']/option[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/select/option[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f84c07d-6be9-42ab-9948-d351b71a46ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Month",
+      "targets": [
+        ["id=id_Month", "id"],
+        ["name=Month", "name"],
+        ["css=#id_Month", "css"],
+        ["xpath=//select[@id='id_Month']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf4678b7-abb9-4295-8505-87d9a66a1bc3",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Month",
+      "targets": [],
+      "value": "label=June"
+    }, {
+      "id": "d5f82bcc-0fa6-4fcc-bc77-4bd8354ea21c",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"06\"]",
+      "targets": [
+        ["css=option[value=\"06\"]", "css"],
+        ["xpath=//option[@value='06']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Month']/option[6]", "xpath:idRelative"],
+        ["xpath=//option[6]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7616d963-4275-4924-9c87-aeb8d9939ac7",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d7224213-2e18-498d-a984-2d85b04ea1a8",
+      "comment": "",
+      "command": "click",
+      "target": "id=bar",
+      "targets": [
+        ["id=bar", "id"],
+        ["css=#bar", "css"],
+        ["xpath=//input[@id='bar']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/label[2]/input", "xpath:idRelative"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea914acc-a652-4a61-b8f9-47e3ac008113",
+      "comment": "",
+      "command": "click",
+      "target": "id=pi",
+      "targets": [
+        ["id=pi", "id"],
+        ["name=optradio", "name"],
+        ["css=#pi", "css"],
+        ["xpath=//input[@id='pi']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div[3]/label/input", "xpath:idRelative"],
+        ["xpath=//label/input", "xpath:position"]
+      ],
+      "value": ""
+>>>>>>> VehicleHireAnalysis
+=======
+      "value": "2005"
+    }, {
+      "id": "5bfe5330-eaa5-4f25-8f98-eaee7f5f61f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.radio",
+      "targets": [
+        ["css=label.radio", "css"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label", "xpath:idRelative"],
+        ["//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e307b6cc-b8a8-49d0-b3ee-d80852c3540d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[2]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[2]", "xpath:idRelative"],
+        ["//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7c41bf7-0295-4906-9dfa-17ff6d317506",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[3]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[3]", "xpath:idRelative"],
+        ["//label[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3efa1827-2a18-43df-b117-6f401740d13d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.checkbox",
+      "targets": [
+        ["css=label.checkbox", "css"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[4]", "xpath:idRelative"],
+        ["//label[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "610c0133-01be-4068-b619-e2a4c2732897",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=svg",
+      "targets": [
+        ["css=svg", "css"]
+      ],
+      "value": ""
+>>>>>>> VehicleDataComparison
+    }]
+  }],
+  "suites": [{
+    "id": "a260ed05-162c-4996-9e93-4aeb13f0e635",
+    "name": "BranchOverviewTestCases",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01dce7ec-9b50-40d8-81c9-03702606730c", "5f5aa108-16c9-4a56-bf8a-68bb6f824691", "747da87e-c002-4285-a676-2482fd5d9c9d", "04b713b2-bf93-4728-bc17-b49398700339"]
+  }, {
+    "id": "b8d77345-ec85-4c09-b316-cba4fb3ff875",
+    "name": "AllTestCases",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01dce7ec-9b50-40d8-81c9-03702606730c", "5f5aa108-16c9-4a56-bf8a-68bb6f824691", "747da87e-c002-4285-a676-2482fd5d9c9d", "04b713b2-bf93-4728-bc17-b49398700339", "bd144fc9-aade-4a84-b9c1-e8e65e84e93e", "5f698d32-fb8d-49e9-9b21-019bf818c755", "6158ca4d-0e27-452b-b714-6d57ef9baa16", "6b661c3e-39f6-4c67-a310-62ee7f92aa31"]
+  }, {
+    "id": "92887ad4-5f13-49f0-8229-b926a0851b33",
+    "name": "BranchDetailsTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bd144fc9-aade-4a84-b9c1-e8e65e84e93e", "6b661c3e-39f6-4c67-a310-62ee7f92aa31", "6158ca4d-0e27-452b-b714-6d57ef9baa16", "5f698d32-fb8d-49e9-9b21-019bf818c755"]
+  }, {
+<<<<<<< HEAD
+<<<<<<< HEAD
+    "id": "93b5fdd8-460c-4071-bb24-af8c83478ae9",
+    "name": "CarRecommendationTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["933c007f-42fa-4cd6-af0d-be8bbcbd31af", "1d61a8d6-9de1-4c77-921a-105795e012c4", "21582598-2e62-4bbe-bc09-dfd09b1c1922"]
+  }, {
+    "id": "311798e2-352b-41d9-bc34-2eac73a4c9fc",
+    "name": "CarFeatureAnalysisTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["ad015756-be93-48eb-8290-b2cc3a4b3d64"]
+=======
+    "id": "340c21ff-7773-43f1-883f-463b181a05d2",
+    "name": "Customsql",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01dce7ec-9b50-40d8-81c9-03702606730c", "4889ca9b-ccc2-437b-817a-ce63c2ea6db5", "3139576b-b494-4079-945c-add4678afca8", "04b713b2-bf93-4728-bc17-b49398700339"]
+  }, {
+    "id": "abbb7d35-d910-42ee-9aec-7d16c0f45eae",
+    "name": "VehicleHireAnalysis",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["61ac8305-7a66-46c8-9ebc-5267518c6738"]
+>>>>>>> VehicleHireAnalysis
+=======
+    "id": "8c6a07f5-7fb7-4b9c-a66f-9e6e42ff2870",
+    "name": "VehicleDataComparison",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0041ca14-dc6b-438a-81ec-c2ada6cd5898"]
+>>>>>>> VehicleDataComparison
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

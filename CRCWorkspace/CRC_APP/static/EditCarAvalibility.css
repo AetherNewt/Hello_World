@@ -1,0 +1,53 @@
+.radio-box-avaliable {
+	display: inline-block;
+}
+.parent {
+	display: flex;
+	margin-top: 20px;
+	height: 5vh;
+}
+.option {
+	width: 200px;
+}
+.radio-yes {
+	width: 100px;
+}
+.radio-no {
+	width: 100px;
+}
+
+#content {
+	background-color: lightgrey;
+}
+#form {
+	display: block;
+	margin-top: 60px;
+}
+.fill {
+	display: flex;
+	min-height: 100% !important;
+	height: 100% !important;
+}
+
+#car-selection {
+	border-style: solid;
+	border-width: 2px;
+	border-radius: 15px;
+	min-width: 25vw;
+	min-height: 23vh;
+}
+.car {
+	display: inline-block;
+	min-height: 12vh;
+}
+#submit-btn {
+	width: 6em;
+	margin-right: 30px;
+}
+
+.heading {
+	width: 4em;
+}
+#carID-input {
+	width: 20em;
+}

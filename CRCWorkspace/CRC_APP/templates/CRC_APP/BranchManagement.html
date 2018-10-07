@@ -1,0 +1,106 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+
+
+{% block title %}Company Overview{% endblock %}
+{% block content %}
+{#    form #}
+{#    dropdown tables for table types#}
+    <form method='POST' action="/CRC_APP/BranchManagement/" class="queryBox" style="border: 2px solid black;min-height: 25vh;padding-top: 10px;padding-left: 10px;padding-right: 10px;margin: 5px;">
+        {% csrf_token %}
+        <div class="input-group mb-3">
+            {{form}}
+        </div>
+        {#    button to search#}
+    <div class="button-container" style="float: right;">
+        <button type="button" class="btn btn-secondary" id="clear" onclick="clearText()">Clear</button>
+        <button type="submit" class="btn btn-success" id="search" >Search</button>
+        <button type="button" class="btn btn-success" id="Save">Save Result</button>
+    </div>
+    {% if error %}
+    <p style="color:rgb(255, 1, 1)">{{error.error}}</p>
+    {% endif %}
+    </form>
+{#    output results container#}
+    <div class="outputTable" style="min-height: 90vh;padding-top: 10px;background-color: (--color-d);">
+{#    navigation output btw table structure and results#}
+        <ul class="nav nav-pills" role="tablist">
+            <li class="nav-item" style="margin-left: 5px;">
+                <a class="nav-link active" data-toggle="pill" href="#TableStructure" role="tab">Table Structure</a>
+            </li>
+            <li class="nav-item" style="margin-left: 5px;">
+                <a class="nav-link" data-toggle="pill" href="#results" role="tab">Result</a>
+            </li>
+
+        </ul>
+{#        tab content#}
+        <div class="tab-content" style="border-top: 2px solid black;">
+            <div id="TableStructure" class="tab-pane fade-in active" role="tabpanel" style="padding-top: 10px;">
+{#            table structure content output here #}
+                <table class="table table-bordered" id="authTable">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Field</th>
+                        <th scope="col">Type</th>
+                        <th scope="col">Null</th>
+                        <th scope="col">Key</th>
+                        <th scope="col">Default</th>
+                        <th scope="col">Extra</th>
+                    </tr>
+                </thead>
+                <tbody style="color: black;">
+                    {% if table %}
+                    {% for row in table %}
+                        <tr>
+                    {% for cell in row %}
+                            <td>{{cell}}</td>
+                    {% endfor %}
+                        </tr>
+                    {% endfor %}
+                    {% endif%}
+                </tbody>
+                </table>
+            </div>
+{#            Input query result tables here #}
+            <div id="results" class="tab-pane fade" role="tabpanel">
+                 {#    table content for car#}
+                <table class="table table-bordered" id="CarTable">
+                    <thead class="thead-dark">
+                        <tr>
+                            {% if tableHead %}
+                            {% for columns in tableHead %}
+                            <th scope="col">{{columns}}</th>
+                            {% endfor %}
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            {% if SQLResult %}
+                            {% for row in SQLResult %}
+                                <tr>
+                            {% for cell in row %}
+                                    <td>{{cell}}</td>
+                            {% endfor %}
+                                </tr>
+                            {% endfor %}
+                            {% endif%}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+{#    table content for auth#}
+    </div>
+
+{#TODO: change color of text in table to black#}
+
+
+{#jquery links#}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    {% comment %} <script type="text/javascript" src="{% static "Management.js" %}"></script> {% endcomment %}
+{#    bootstrap jquery and javascript#}
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+{% endblock %}

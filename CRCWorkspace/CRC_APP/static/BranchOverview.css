@@ -1,0 +1,55 @@
+#parent {
+	display: grid;
+	grid-template-columns: 40%, 30%, 30%;
+	min-height: 80vh;
+	grid-template-areas:
+		"form-container graph1 graph2"
+		"form-container graph3 graph4";
+}
+
+#form {
+	display: grid;
+	grid-area: form;
+}
+.selection-container {
+	min-height: 10vh;
+}
+
+#form-container {
+	display: grid;
+	grid-area: form-container;
+	background-color: aqua;
+	grid-template-columns: 20% 60% 20%;
+	grid-template-areas: ". form .";
+}
+
+#graph1 {
+	display: grid;
+	grid-area: graph1;
+	background-color: brown;
+}
+
+#graph2 {
+	display: grid;
+	grid-area: graph2;
+	background-color: green;
+}
+#graph3 {
+	display: grid;
+	grid-area: graph3;
+	background-color: purple;
+}
+#graph4 {
+	display: grid;
+	grid-area: graph4;
+	background-color: grey;
+}
+
+.date-field {
+	display: inline-block;
+	width: 15vw !important;
+	min-height: 10vh;
+}
+#submit-btn {
+	width: 10em;
+}

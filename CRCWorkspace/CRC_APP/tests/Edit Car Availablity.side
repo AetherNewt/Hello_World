@@ -1,0 +1,674 @@
+{
+  "id": "b44b3e13-b796-4a74-a3f4-94f9fbf4b8ec",
+  "version": "1.1",
+  "name": "Edit Car Availablity",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "7e406bc8-11f7-483b-a132-9ecb2a9b076c",
+    "name": "Form Exists",
+    "commands": [{
+      "id": "55068043-b064-4fc6-9a5e-ef99419e9bdd",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d71d6233-6596-4bd6-9273-05c6f9c7a541",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=form",
+      "targets": [
+        ["css=form", "css"],
+        ["//form[@action='/CRC_APP/EditCarAvailablity']", "xpath:attributes"],
+        ["//div[@id='form']/form", "xpath:idRelative"],
+        ["//form", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "107744d6-f527-439e-ba14-0e2360d4cc48",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='car-selection']/div/div/div[2]/label/span",
+      "targets": [
+        ["css=div.radio-no > label.Form-label--tick > span.Form-label-text", "css"],
+        ["//div[@id='car-selection']/div/div/div[2]/label/span", "xpath:idRelative"],
+        ["//div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1b7d6d69-b40b-438c-9e12-f92911dd9794",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div/label/span",
+      "targets": [
+        ["//div[@id='car-selection']/div[2]/div/div/label/span", "xpath:idRelative"],
+        ["//div[2]/div/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e742b42-46f1-49c4-a91f-51c75c191e67",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span",
+      "targets": [
+        ["//div[@id='car-selection']/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["//div[2]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf72c77a-47c6-42e4-a6cd-0a81e1a9141d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "xpath=//div[@id='car-selection']/div/div/div/label/span",
+      "targets": [
+        ["css=span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "84b1387e-ece5-470d-a798-a6f124719fbc",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["//button[@id='submit-btn']", "xpath:attributes"],
+        ["//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6c954545-2246-4d7b-bb13-ba4a55f2c75c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "de352f00-aa6b-4f2c-9353-f49d8e1b30be",
+    "name": "Valid Input Both Yes",
+    "commands": [{
+      "id": "6c3abdf7-7c3d-4272-8e4a-69c7a6b4e068",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "080b8001-0be3-4778-8f72-cfee99faf814",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb97c5c9-0af5-4856-aae3-4a34cb69efbd",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "14810"
+    }, {
+      "id": "833617da-a8a5-472e-ae67-bbabc98ca028",
+      "comment": "",
+      "command": "click",
+      "target": "css=span.Form-label-text",
+      "targets": [
+        ["css=span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c220f33-84c1-41a4-93f0-c9beb1f72c0b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ef7452b6-31e3-488f-badb-509fe787c917",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4af439c2-6671-4b30-8efb-77bcb02651ad",
+      "comment": "",
+      "command": "click",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b7e9dba-d2ee-40cd-be36-51af6764d932",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "SUCCESS"
+    }]
+  }, {
+    "id": "7b92e94b-cab2-4a81-bf2b-f69006be58ac",
+    "name": "Invalid Input Mixed",
+    "commands": [{
+      "id": "d39a3089-8488-418f-9478-b5d44519b112",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2586daa4-d5a7-4bd7-a860-6113760b47ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "659c54b3-7ce1-4eb5-abf9-3ef1f0db2872",
+      "comment": "",
+      "command": "click",
+      "target": "id=content",
+      "targets": [
+        ["id=content", "id"],
+        ["css=#content", "css"],
+        ["xpath=//div[@id='content']", "xpath:attributes"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6bfa5cc0-1ea4-4142-84a6-799aa99409e1",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "111111111"
+    }, {
+      "id": "dd126718-4c98-4c00-8a9b-3087c066591d",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div/div/div/label/span",
+      "targets": [
+        ["css=span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0fcb43d2-eb36-4975-ac4a-7a34221b1443",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "44e9fd4a-68ad-4f67-876c-0f92b541a75e",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5426c9c6-1369-4aca-93b9-a8fade5b6956",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "FAILED CarID: 111111111 does not exist"
+    }]
+  }, {
+    "id": "c11c91b5-b3d7-4b33-9d54-7a0f714f62c2",
+    "name": "Valid Input Both No",
+    "commands": [{
+      "id": "2857f3ec-9424-4ada-8131-a95d4da90cf1",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64794041-8063-41ba-80ad-87847c89bee6",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0c7432cc-0d7f-47fc-b32f-9e9618667826",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "14810"
+    }, {
+      "id": "87d48972-b375-4dfb-ab90-58705201dada",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.radio-no > label.Form-label--tick > span.Form-label-text",
+      "targets": [
+        ["css=div.radio-no > label.Form-label--tick > span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7dd18711-7e23-4105-8b6e-d6813ce5360b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d37395dd-83ba-4942-8c91-d98be070a35a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e5430406-e67d-4590-a5bb-0c9d5f7832ac",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.container.fill",
+      "targets": [
+        ["css=div.container.fill", "css"],
+        ["xpath=//div[@id='content']/div", "xpath:idRelative"],
+        ["xpath=//div[3]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8edaedb4-7efe-4cdf-8738-337fe9c83554",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "SUCCESS"
+    }]
+  }, {
+    "id": "d467dd59-6e87-4078-bf99-bd1954cb4011",
+    "name": "Valiid Input Mixed",
+    "commands": [{
+      "id": "96ef2ccb-6703-433e-a921-30618ad1fe61",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "279b4b34-11c4-4fd1-81d0-d3fd3c1a86c2",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "15623f98-21cc-45f5-8d9f-60184d5c9582",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "14810"
+    }, {
+      "id": "432c55cb-6bfe-44d5-8dd4-6885727e575b",
+      "comment": "",
+      "command": "click",
+      "target": "css=span.Form-label-text",
+      "targets": [
+        ["css=span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7bad63e8-531b-45c5-8cb6-56c8fa8712b8",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6dd72c4f-ecc0-4218-b381-25ca167f36a0",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "56dc994f-e7c4-4c55-853c-a4efa9dd97e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "762923d7-5fda-4d61-af02-ffd874ded681",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "SUCCESS"
+    }]
+  }, {
+    "id": "fdb8af5b-b13b-4291-9de3-4a124f7faa65",
+    "name": "Invalid Input Both Yes",
+    "commands": [{
+      "id": "1bcae38e-feed-4849-878e-9ec23e61212e",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7ecae2b-ecb0-49d2-a239-24d4aa26b85e",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b6d0c5a9-d43c-46dc-a028-2491e6328ba7",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "11111111"
+    }, {
+      "id": "20ec48be-138e-4da4-9e84-5ecc40fad23a",
+      "comment": "",
+      "command": "click",
+      "target": "css=span.Form-label-text",
+      "targets": [
+        ["css=span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "91d469ec-dcfc-45e2-9e80-e9d674309646",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "06b3c430-7585-4256-9d5f-1dacffc4600a",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1ae8257b-0dbb-473c-8048-c6ae72a2d478",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "FAILED CarID: 11111111 does not exist"
+    }]
+  }, {
+    "id": "0405fff7-ceb1-4ff2-beb7-353fd4e35f64",
+    "name": "Invalid Input Both No",
+    "commands": [{
+      "id": "ff6f7dc4-5bf7-4c03-96c7-485e6ba55825",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/EditCarAvailablity",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ed7777e4-0c84-4c33-9aa5-50c4b530f91f",
+      "comment": "",
+      "command": "click",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c552a730-54e0-4368-a007-a5c82ac39cbc",
+      "comment": "",
+      "command": "type",
+      "target": "id=carID-input",
+      "targets": [
+        ["id=carID-input", "id"],
+        ["name=carID", "name"],
+        ["css=#carID-input", "css"],
+        ["xpath=//input[@id='carID-input']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "11111111"
+    }, {
+      "id": "497aa4b7-5124-4eb0-be5d-a3d8bbc16b53",
+      "comment": "",
+      "command": "click",
+      "target": "css=div.radio-no > label.Form-label--tick > span.Form-label-text",
+      "targets": [
+        ["css=div.radio-no > label.Form-label--tick > span.Form-label-text", "css"],
+        ["xpath=//div[@id='car-selection']/div/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea00472b-079a-46fb-8f1f-8d83e4be9d58",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span",
+      "targets": [
+        ["xpath=//div[@id='car-selection']/div[2]/div/div[2]/label/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div[2]/label/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b8bc4ae-a8f1-4391-99fa-7af4e71791a1",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit-btn",
+      "targets": [
+        ["id=submit-btn", "id"],
+        ["css=#submit-btn", "css"],
+        ["xpath=//button[@id='submit-btn']", "xpath:attributes"],
+        ["xpath=//div[@id='car-selection']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "43a0094e-11a4-49ef-baea-1d599040e5fa",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=result-message",
+      "targets": [
+        ["id=result-message", "id"],
+        ["css=#result-message", "css"],
+        ["xpath=//p[@id='result-message']", "xpath:attributes"],
+        ["xpath=//div[@id='form']/p", "xpath:idRelative"],
+        ["xpath=//p", "xpath:position"]
+      ],
+      "value": "FAILED CarID: 11111111 does not exist"
+    }]
+  }],
+  "suites": [{
+    "id": "3c335899-1585-4b6b-8ca9-968b8f03a7b0",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["7e406bc8-11f7-483b-a132-9ecb2a9b076c", "0405fff7-ceb1-4ff2-beb7-353fd4e35f64", "fdb8af5b-b13b-4291-9de3-4a124f7faa65", "7b92e94b-cab2-4a81-bf2b-f69006be58ac", "c11c91b5-b3d7-4b33-9d54-7a0f714f62c2", "de352f00-aa6b-4f2c-9353-f49d8e1b30be", "d467dd59-6e87-4078-bf99-bd1954cb4011"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

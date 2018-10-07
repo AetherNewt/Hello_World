@@ -1,0 +1,94 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block title %}Vehicle Hire Analysis{% endblock %}
+{% block content %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<div class="container" style="border: 2px solid blue;width: 100%;height: 10vh;margin-top: 10px;padding: 15px;">
+            <form method="POST">
+                {% csrf_token %}
+                <label for="filter" style="float:left;font-size: 20px;">Filter:</label>
+                <div style="display: inline;float: left;margin-left: 20px;">
+                   {{ form.Month }}
+                </div>
+                <div style="display: inline;float: left;margin-left: 20px;">
+                    {{ form.Year }}
+                </div>
+                <button class="btn btn-success" type="submit" style="float: right;">Display Most Popular Hire</button>
+            </form>
+
+        </div>
+{#table for most popular car hire#}
+            <div style="width:60vw;text-align: center;box-sizing: border-box; padding: 10px;float: left;">
+                {% if Heading %}
+                <h4>Most popular Cars of {{ Heading }}</h4>
+                {% endif %}
+                <table class="table table-bordered" id="analysis">
+                    <thead class="thead-dark">
+                        <tr>
+                            {% if thead %}
+                                {% for column in thead %}
+                                    <th scope="col">{{ column }}</th>
+                                {% endfor %}
+                            {% endif %}
+                        </tr>
+                    </thead>
+                    {% if warning %}
+                        <p style="font-size: 20px;color: red;">{{ warning }}</p>
+                    {% endif %}
+                    <tbody>
+                        <tr>
+                        {% if Output %}
+                            {% for row in Output %}
+                                <tr>
+                                {% for cell in row %}
+                                <td>{{cell}}</td>
+                                {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        {% endif%}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+{#    data visualization charts #}
+        <div class="visual" style="padding:10px;box-sizing:border-box;display: inline-block;width: 38vw;float: right;overflow: auto;height: 55vh;">
+            <h4>Options:</h4>
+            <label class="radio-inline"><input id="pi" onclick="drawChart()" type="radio" name="optradio" checked>Pi Chart</label>
+            <label class="radio-inline"><input id="bar" onclick="drawChart()" type="radio" name="optradio">Bar Graph</label>
+            <label class="radio-inline"><input id="scat" onclick="drawChart()" type="radio" name="optradio" checked>Scatter Chart</label>
+{#            <label class="radio-inline"><input id="bubble" onclick="drawChart()" type="radio" name="optradio">Bubble Chart</label>#}
+            <div id="graphs" style="width:30vw;height:40vh;border:1px solid black;"></div>
+        </div>
+
+<script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    
+    function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+            ['CarMake', 'Number of Cars Hired'],
+            {% for results in Output %}
+                ['{{ results.1 }} {{ results.0 }}', {{ results.3 }}],
+            {% endfor %}
+        ]);
+
+
+        var options = {title: "Car Hires Per Month" };
+        var chart = null;
+        if (document.getElementById("pi").checked) {
+            chart = new google.visualization.PieChart(document.getElementById('graphs'));
+        }
+        else if (document.getElementById("bar").checked) {
+            chart = new google.visualization.BarChart(document.getElementById('graphs'));
+        }
+        else if (document.getElementById("scat").checked) {
+            chart = new google.visualization.ScatterChart(document.getElementById('graphs'));
+        }
+
+        chart.draw(data,options);
+
+    }
+
+</script>
+
+{% endblock %}

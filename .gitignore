@@ -1,0 +1,9 @@
+/.vscode
+/.idea
+CRCVir
+CRCWorkspace/CRC_APP/__pycache__
+venv
+CRCWorkspace/CRCWorkspace/__pycache__
+CRCWorkspace/CRC_APP/migrations/__pycache__
+*.py[cod]
+CRCWorkspace/.idea

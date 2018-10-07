@@ -1,0 +1,64 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block title %}Car Feature Analysis{% endblock %}
+{% block content %}
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<div class='container'>
+			<div class="row">
+				<div class="col-4">
+				  <h2>Analysis Options</h2>
+					<p style="margin:0;">Style:</p>
+					<label class="radio-inline"><input id="pi" onclick="drawChart()" type="radio" name="optradio" checked>Pi Chart</label>
+					<label class="radio-inline"><input id="bar" onclick="drawChart()" type="radio" name="optradio">Bar Graph</label>
+					<form method='POST'>
+						{% csrf_token %}
+						<div class="form-group">
+						  <label for="sel1">Feature</label>
+						  {{ form.CarFeature }}
+						</div> 
+						<div class="form-group">
+						  <label for="sel1">Filter Store</label>
+						  {{ form.StoreSeach }}
+						</div> 
+						<div class='input-group mb-3'>
+							<button class="btn btn-success" type="submit">Update</button>
+						</div>
+					</form>
+					
+				</div>
+				<div class="col-8">
+				  <h2>Visualization</h2>
+				  <div id="chart"></div>
+				</div>
+			</div>
+	</div> 	
+
+	<script type="text/javascript">
+		// Load google charts
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		// Draw the chart and set the chart values
+		function drawChart() {
+		  var data = google.visualization.arrayToDataTable([
+		  ['Feature', 'Orders with feature'],
+		  {% for row in results %}
+			[
+				'{{row.0}}',{{row.1}}
+			],
+		  {% endfor %}
+		]);
+
+		  // Optional; add a title and set the width and height of the chart
+		  var options = {'width':550, 'height':400, backgroundColor: { fill:'transparent' } };
+		  var chart = null;
+		  if (document.getElementById('pi').checked){
+		  // Display the chart inside the <div> element with id="piechart"
+			chart = new google.visualization.PieChart(document.getElementById('chart'));
+		  }else{
+			chart = new google.visualization.BarChart(document.getElementById('chart'));
+		  }
+		  chart.draw(data, options);
+		}
+	</script>
+{% endblock %}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	{% load static %}	
+	<link type="text/css" rel="stylesheet" href="{% static 'main.css' %}">
+{#bootstrap link#}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	{% block extrahead %}{% endblock %}
+	<link rel="icon" href="{% static './Icons/icon5.png' %}">
+    <title>CRC Car Rental</title>
+</head>
+<body>
+	<div style="border:0px; margin:0px;" class="navbar">
+	<ul>
+	<h1 style="text-align: left; color:white;">CRC Car Rental: {% block title %}Home{% endblock %}</h1>
+	</ul>
+	</div>
+	{% if user.is_authenticated and user.is_superuser %}
+		{% include 'CRC_APP/NavbarElements/navbarManager.html' %}
+	{% elif user.is_authenticated and user.is_staff %}
+		{% include 'CRC_APP/NavbarElements/navbarStaff.html' %}
+	{% elif user.is_authenticated %}
+		{% include 'CRC_APP/NavbarElements/navbarCustomer.html' %}
+	{% else %}
+		{% include 'CRC_APP/NavbarElements/navbarUnauthenticated.html' %}
+	{% endif %}
+	
+	<div id="content">
+        {% block content %}{% endblock %}
+    </div>
+	
+	{% if user.is_authenticated and user.is_superuser %}
+		{% include 'CRC_APP/FooterElements/footerManager.html' %}
+	{% elif user.is_authenticated and user.is_staff %}
+		{% include 'CRC_APP/FooterElements/footerStaff.html' %}
+	{% elif user.is_authenticated %}
+		{% include 'CRC_APP/FooterElements/footerCustomer.html' %}
+	{% else %}
+		{% include 'CRC_APP/FooterElements/footerUnauthenticated.html' %}
+	{% endif %}
+
+
+</body>
+</html>

@@ -1,0 +1,17 @@
+{% load static %}	
+<link type="text/css" rel="stylesheet" href="{% static 'Navbar.css' %}">
+
+<style>
+div.navbar li, div.navbar div.dropdown{
+    width: 25%;
+}
+</style>
+
+<div style="border:0px; margin:0px;" class="navbar">
+	<ul>
+	  {% include 'CRC_APP/NavbarElements/Customers.html' %}
+	  {% include 'CRC_APP/NavbarElements/CompanyOverview.html' %}
+	  {% include 'CRC_APP/NavbarElements/Notifications.html' %}
+	  {% include 'CRC_APP/NavbarElements/LogOut.html' %}
+	</ul>
+</div>

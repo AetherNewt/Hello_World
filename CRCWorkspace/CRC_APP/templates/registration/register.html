@@ -1,0 +1,16 @@
+{% extends "CRC_APP/template.html" %}
+
+{% block title %}Register{% endblock %}
+
+{% block content %}
+    <h1 style="text-align: center">Sign Up</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div style="width:50vw;margin: auto;">
+            {{ form.as_p }}
+
+            <input type="submit" value="Register">
+        </div>
+    </form>
+{% endblock %}
+

@@ -1,0 +1,246 @@
+{
+  "id": "5dfe5729-8b81-464f-accc-10a590305154",
+  "version": "1.1",
+  "name": "BranchDetailsTests",
+  "url": "http://localhost:8000/CRC_APP/BranchDetails/",
+  "tests": [{
+    "id": "c53f1ebd-3296-45d3-a118-7223db184de1",
+    "name": "BranchDetailsPageExists",
+    "commands": [{
+      "id": "acb11060-5c0c-4903-8fa2-0167b7d15a9b",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bee64ddb-5abb-43e8-9fd9-f8322f38f643",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["//input[@id='id_Suburb']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6c2b52b-5eb4-43f4-8269-5afdccb7ed96",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "93fb901d-30b6-4406-a180-779ace54656a",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["//input[@id='id_Suburb']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "7abda91f-0a20-41d9-9ff5-346f80cd37e3",
+    "name": "BranchDetailsSearchQueensland",
+    "commands": [{
+      "id": "6696c462-e0bd-45b5-80e3-e30429e2899b",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f56e7881-a7e4-4335-8397-2fbd4670c8b9",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//input[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "46dfcc46-04d9-4eff-8dc8-09be295b8c29",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//input[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Queensland"
+    }, {
+      "id": "b3db456d-064f-4a6f-9b64-ee8aec1de6d2",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0c89bd3-8dfa-4b01-b165-830245d4cc4e",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//div[@id='content']/div/div/ul/li/h3", "xpath:idRelative"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "Brisbane_store"
+    }, {
+      "id": "7c990a98-3ca9-4df3-88d2-d56845841a7a",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css"],
+        ["//div[@id='content']/div/div/ul/li/h4", "xpath:idRelative"],
+        ["//h4", "xpath:position"]
+      ],
+      "value": "Branch Address: 7832 Landing Dr,Brisbane ,Queensland,AUS"
+    }, {
+      "id": "751cf68a-3fd2-48d2-81f2-ff17428b077f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h5",
+      "targets": [
+        ["css=h5", "css"],
+        ["//div[@id='content']/div/div/ul/li/h5", "xpath:idRelative"],
+        ["//h5", "xpath:position"]
+      ],
+      "value": "Phone Number: 262-535-0112"
+    }, {
+      "id": "692c9a9c-a2b8-421b-9a54-8aecb9060a68",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='content']/div/div/ul/li[2]/h3",
+      "targets": [
+        ["//div[@id='content']/div/div/ul/li[2]/h3", "xpath:idRelative"],
+        ["//li[2]/h3", "xpath:position"]
+      ],
+      "value": "Caloundra_store"
+    }]
+  }, {
+    "id": "22693319-dd5a-4d9b-b43d-e925880559f3",
+    "name": "BranchDetailsSearchTasmania",
+    "commands": [{
+      "id": "74116a06-2ace-4230-94fe-beda9978ce5e",
+      "comment": "",
+      "command": "open",
+      "target": "/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6b9f7aa7-1df3-4f7d-abea-259b1fe4cec0",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//input[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dcc6a7a4-719d-45a2-942e-75a1c0bccf69",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//input[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Tasmania"
+    }, {
+      "id": "50f1aa61-fbf4-442d-8aa6-914768f89513",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f24051a-13c9-41e5-aa85-3e2a65c4634c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//div[@id='content']/div/div/ul/li/h3", "xpath:idRelative"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "Hobart_store"
+    }, {
+      "id": "4a0caf01-cb79-4d77-88c5-6d1f29b160b4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css"],
+        ["//div[@id='content']/div/div/ul/li/h4", "xpath:idRelative"],
+        ["//h4", "xpath:position"]
+      ],
+      "value": "Branch Address: 636 Vine Hill Way,Hobart ,Tasmania,AUS"
+    }, {
+      "id": "dbc5a158-f08c-42fc-b188-ed4a307c47aa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h5",
+      "targets": [
+        ["css=h5", "css"],
+        ["//div[@id='content']/div/div/ul/li/h5", "xpath:idRelative"],
+        ["//h5", "xpath:position"]
+      ],
+      "value": "Phone Number: 1 (11) 543 535-0182"
+    }]
+  }],
+  "suites": [{
+    "id": "ab06d577-a264-48af-b49e-7f712e605cc4",
+    "name": "BranchDetailTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c53f1ebd-3296-45d3-a118-7223db184de1", "7abda91f-0a20-41d9-9ff5-346f80cd37e3", "22693319-dd5a-4d9b-b43d-e925880559f3"]
+  }],
+  "urls": ["http://localhost:8000/", "http://localhost:8000/CRC_APP/BranchDetails/"],
+  "plugins": []
+}

@@ -1,0 +1,68 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block extrahead %}
+<link type="text/css" rel="stylesheet" href="{% static 'BranchOverview.css' %}">
+{%endblock%}
+{% block title %}Company Overview{% endblock %}
+{% block content %}
+<div id='parent'>
+	<div id='form-container'>
+			<div id='form'> 
+			<form action='/CRC_APP/BranchOverview/' method='POST'>			
+				{% csrf_token %}
+					<div class='selection-container'>
+						<label>Car Type:</label>
+						{{form.car_selection}}
+					</div>
+					<div class='selection-container'>
+						<label>State 1:</label>
+						{{form.State1}}
+					</div >
+					<div class='selection-container'>
+						<label>State 2:</label>
+						{{form.State2}}
+					</div>
+					<div class='selection-container'>
+						<label>State 3:</label>
+						{{form.State3}}
+					</div>
+					<div class='selection-container'>
+						<label>State 4:</label>
+						{{form.State4}}
+					</div>
+					<div class='radio-selection'>
+						{% for radio in form.date_selection %}
+							{% if radio.id_for_label == 'id_date_selection_0' %}
+								{{ radio.tag }}
+								<label>Return Date</label>
+							{% else %}
+							{{ radio.tag }}
+							<label>Rent Date</label>
+							{% endif %}
+							
+						{% endfor %}
+					</div>
+					<div class='date-selection'>
+						<div class='date-field'>
+							<label>From: </label>
+							{{form.start_date}}
+						</div>
+						<div class='date-field'>
+							<label>To: </label>
+							{{form.end_date}}
+						</div>
+					</div>
+					<div>
+						<button type="submit" id='submit-btn' class="btn btn-primary float-right">Submit</button>
+					</div>
+			</form>
+		</div>
+	</div>
+
+	<div id="graph1"></div>
+	<div id="graph2"></div>
+	<div id="graph3"></div>
+	<div id="graph4"></div>
+</div>
+			
+{% endblock %}

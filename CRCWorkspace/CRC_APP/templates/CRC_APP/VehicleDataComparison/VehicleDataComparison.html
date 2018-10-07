@@ -1,0 +1,172 @@
+{% extends "CRC_APP/template.html" %}
+{% load static %}
+{% block extrahead %}
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+{% endblock %}
+{% block title %}Vehicle Data Comparison{% endblock %}
+{% block content %}
+		<div class='container'>
+			<div class="row">
+				<div class="col-6">
+				  <h2>Analysis Options</h2>
+					<table id="resultsTable" , style="width:100%;">
+						<tr>
+							<th>{% include 'CRC_APP/VehicleDataComparison/BranchDropdown.html' %}</th>
+							<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(1,'float')">Year</button></th>
+							<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(2,'float')">Month</button></th>
+							<th>{% include 'CRC_APP/VehicleDataComparison/AgeDropdown.html' %}</th>
+							<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(4)">Vehicle Make</button></th>
+							<th><button type="button" style="width:100%;" class="btn btn-light" onclick="sortTable(5,'float')">No. Rented</button></th>
+						</tr>
+						
+						{% for row in results %}
+						<tr>
+							{% for val in row %}
+							<td>{{val}}</td>
+							{% endfor %}
+						</tr>
+						{% endfor %}
+
+						
+					</table>
+				</div>
+				<div class="col-6">
+				  <h2>Visualization</h2>
+				  <div id="chart"></div>
+				</div>
+			</div>
+	</div> 	
+
+	<script type="text/javascript">
+		// Load google charts
+		google.charts.load('current', {'packages':['corechart']});
+		google.charts.setOnLoadCallback(drawChart);
+
+		// Draw the chart and set the chart values
+		function drawChart() {
+			var arr = [["Year/Month Car","Number of Rentals"]];
+			  
+			var table, rows, i, x;
+			table = document.getElementById("resultsTable");
+			rows = table.rows;
+			for (i = 1; i < (rows.length); i++) {
+				/*Get the two elements you want to compare,
+				one from current row and one from the next:*/
+				if (rows[i].style.display != "none"){
+					month = rows[i].getElementsByTagName("td")[2].innerHTML.toLowerCase();
+					year = rows[i].getElementsByTagName("td")[1].innerHTML.toLowerCase();
+					make = rows[i].getElementsByTagName("td")[4].innerHTML.toLowerCase();
+					barTitle = year+"/"+month+": "+make;
+					count = parseFloat(rows[i].getElementsByTagName("td")[5].innerHTML.toLowerCase());
+				
+					var hasAdded = false;
+					for (var ii = 0; ii < (arr.length); ii++){
+						if (barTitle == arr[ii][0]){
+							arr[ii][1] = arr[ii][1] + count;
+							hasAdded = true;
+							break;
+						}
+					}
+					if (!hasAdded){
+						arr.push([barTitle,count]);
+					}
+				}
+			}
+			var data = google.visualization.arrayToDataTable(arr);
+			
+
+			// Optional; add a title and set the width and height of the chart
+			var options = {'width':550, 'height':500, backgroundColor: { fill:'transparent' } };
+			var chart = null;
+			// Display the chart inside the <div> element with id="piechart"
+			chart = new google.visualization.ColumnChart(document.getElementById('chart'));
+			chart.draw(data, options);
+		}
+		
+		function showTable () {
+			table = document.getElementById("resultsTable");
+			rows = table.rows;
+			for (i = 1; i < (rows.length); i++) {
+				rows[i].style.display = 'table-row';
+			}
+		}
+		
+		function filterTableAge() {
+			var agesChecked = [0,0,0,0];
+			if (document.getElementById('18').checked){
+				agesChecked[0] = 1;
+			}if (document.getElementById('26').checked){
+				agesChecked[1] = 1;
+			}if (document.getElementById('41').checked){
+				agesChecked[2] = 1;
+			}if (document.getElementById('56').checked){
+				agesChecked[3] = 1;
+			}
+			
+			var table, rows, i, x;
+			table = document.getElementById("resultsTable");
+			rows = table.rows;
+			for (i = 1; i < (rows.length); i++) {
+				/*Get the two elements you want to compare,
+				one from current row and one from the next:*/
+				x = rows[i].getElementsByTagName("td")[3];
+				x = x.innerHTML.toLowerCase().trim();
+				//check if the two rows should switch place:
+				if (x == "18-25") {
+					if (!agesChecked[0]){
+						rows[i].style.display = 'none';
+					}
+				}
+				if (x == "26-40") {
+					if (!agesChecked[1]){
+						rows[i].style.display = 'none';
+					}
+				}
+				if (x == "41-55") {
+					if (!agesChecked[2]){
+						rows[i].style.display = 'none';
+					}
+				}
+				if (x == "56+") {
+					if (!agesChecked[3]){
+						rows[i].style.display = 'none';
+					}
+				}
+			}
+			
+		}
+		
+		function filterTableStore() {
+			
+			var filter = document.getElementById("branchFilter").value.toLowerCase();
+			
+			var table, rows, i, x;
+			table = document.getElementById("resultsTable");
+			rows = table.rows;
+			var re = new RegExp(filter);
+			var n;
+			for (i = 1; i < (rows.length); i++) {
+				/*Get the two elements you want to compare,
+				one from current row and one from the next:*/
+				x = rows[i].getElementsByTagName("td")[0];
+				x = x.innerHTML.toLowerCase().trim();
+				//check if the two rows should switch place:
+				n = x.search(re);
+				if (n == -1) {
+					rows[i].style.display = 'none';
+				}
+			}
+		}
+
+		function filterTable () {
+			showTable();
+			filterTableAge();
+			filterTableStore();
+			drawChart();
+		}
+
+</script>
+{% endblock %}

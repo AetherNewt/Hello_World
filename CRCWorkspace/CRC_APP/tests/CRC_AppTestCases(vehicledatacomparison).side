@@ -1,0 +1,749 @@
+{
+  "id": "05779edf-8a64-48b2-af4b-b601c3fa466d",
+  "version": "1.1",
+  "name": "CRC_AppTestCases",
+  "url": "http://localhost:8000",
+  "tests": [{
+    "id": "5f5aa108-16c9-4a56-bf8a-68bb6f824691",
+    "name": "BranchOverviewTestElementsExists",
+    "commands": [{
+      "id": "e5994a88-95cf-43c8-b14e-be975954cc12",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/CRC_APP/BranchOverview/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fff12d67-8013-426c-8f0f-ad642732d780",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["//input[@id='id_Branch']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c9dcfe34-f5e9-49f1-b9a3-413644d970d2",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["//input[@id='id_Branch']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f867a451-e85e-4151-bb8b-6f3fb2b939db",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "747da87e-c002-4285-a676-2482fd5d9c9d",
+    "name": "BranchOverviewTestValidInput",
+    "commands": [{
+      "id": "51ceef1a-1fa8-4834-aa11-df2abe903503",
+      "comment": "",
+      "command": "open",
+      "target": "localhost:8000/CRC_APP/BranchOverview/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8b79ff06-3e01-44f3-8378-415c82b9bd57",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["xpath=//input[@id='id_Branch']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0d1aabac-add6-4839-aaea-77aec3af99d5",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_Branch",
+      "targets": [
+        ["id=id_Branch", "id"],
+        ["name=Branch", "name"],
+        ["css=#id_Branch", "css"],
+        ["xpath=//input[@id='id_Branch']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "Sydney_store"
+    }, {
+      "id": "7ca21f3d-fed4-4aa9-bd1a-80bab651749d",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca81787c-e61a-44a7-8937-29a338ef1949",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=td",
+      "targets": [
+        ["css=td", "css"],
+        ["//table[@id='CarReturnDetails']/tbody/tr[2]/td", "xpath:idRelative"],
+        ["//td", "xpath:position"]
+      ],
+      "value": "18"
+    }, {
+      "id": "434ac273-465d-40c6-ae60-190e2471cc5c",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='CarReturnDetails']/tbody/tr[3]/td",
+      "targets": [
+        ["//table[@id='CarReturnDetails']/tbody/tr[3]/td", "xpath:idRelative"],
+        ["//tr[3]/td", "xpath:position"]
+      ],
+      "value": "58"
+    }]
+  }, {
+    "id": "01dce7ec-9b50-40d8-81c9-03702606730c",
+    "name": "Login",
+    "commands": [{
+      "id": "abfeed30-7e78-4c1d-b0f8-3d7939a1e5c0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/accounts/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e3788eeb-e416-4e74-bce4-23d0a8780140",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Log In",
+      "targets": [
+        ["linkText=Log In", "linkText"],
+        ["//a[contains(text(),'Log In')]", "xpath:link"],
+        ["//a[contains(@href, '/accounts/login/?next=/accounts/login/')]", "xpath:href"],
+        ["//li[6]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f2dd8036-b901-498d-a40a-057616e4c3b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_username",
+      "targets": [
+        ["id=id_username", "id"],
+        ["name=username", "name"],
+        ["css=#id_username", "css"],
+        ["//input[@id='id_username']", "xpath:attributes"],
+        ["//div[@id='content']/form/div/p/input", "xpath:idRelative"],
+        ["//p/input", "xpath:position"]
+      ],
+      "value": "test-user"
+    }, {
+      "id": "4aa05c68-b967-48de-9ecf-2d6d8e82b55a",
+      "comment": "",
+      "command": "type",
+      "target": "id=id_password",
+      "targets": [
+        ["id=id_password", "id"],
+        ["name=password", "name"],
+        ["css=#id_password", "css"],
+        ["//input[@id='id_password']", "xpath:attributes"],
+        ["//div[@id='content']/form/div/p[2]/input", "xpath:idRelative"],
+        ["//p[2]/input", "xpath:position"]
+      ],
+      "value": "test-user-password"
+    }, {
+      "id": "00da864f-a70e-4606-b8bf-e481e5f85cce",
+      "comment": "",
+      "command": "click",
+      "target": "css=input[type=\"submit\"]",
+      "targets": [
+        ["css=input[type=\"submit\"]", "css"],
+        ["xpath=//input[@value='login']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/form/div/p[3]/input", "xpath:idRelative"],
+        ["xpath=//p[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "70726385-3f4b-4be7-8d9d-d04c2b8f0d6e",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "04b713b2-bf93-4728-bc17-b49398700339",
+    "name": "Logout",
+    "commands": [{
+      "id": "6816b2b5-d8c8-4a28-9fc5-a64962c6d87e",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Log Out",
+      "targets": [
+        ["linkText=Log Out", "linkText"],
+        ["//a[contains(text(),'Log Out')]", "xpath:link"],
+        ["//a[contains(@href, '/accounts/logout/?next=/accounts/login/')]", "xpath:href"],
+        ["//li[5]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaa428d4-2182-4553-adc6-5f9585bbbb2d",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "bd144fc9-aade-4a84-b9c1-e8e65e84e93e",
+    "name": "BranchDetailsTestElementsExist",
+    "commands": [{
+      "id": "4fce37c6-d6d8-47e8-a8dd-0326ca559bbd",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "515d06e3-5e0b-4f7e-a79a-73810ef80e66",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["//select[@id='id_Suburb']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ff1cceb1-8eea-42f1-9ef0-9243fd46e521",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6b661c3e-39f6-4c67-a310-62ee7f92aa31",
+    "name": "BranchDetailsTest_SingleElement_Tasmania",
+    "commands": [{
+      "id": "78ea973c-ceba-4679-b192-07b2bbfe183c",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4a916a2a-641c-47ac-adb6-8af483047d53",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=Tasmania"
+    }, {
+      "id": "f56ddd5f-6c20-43a2-9240-81bafa4aaf22",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"Tasmania\"]",
+      "targets": [
+        ["css=option[value=\"Tasmania\"]", "css"],
+        ["xpath=//option[@value='Tasmania']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[4]", "xpath:idRelative"],
+        ["xpath=//option[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc307dfe-a436-4bc6-876a-a3a69bf62203",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a19dfbf5-4080-49f1-b693-f1b31e414166",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h3",
+      "targets": [
+        ["css=h3", "css"],
+        ["//div[@id='content']/div/div/ul/li/h3", "xpath:idRelative"],
+        ["//h3", "xpath:position"]
+      ],
+      "value": "Hobart_store"
+    }, {
+      "id": "cae947d7-6567-41ac-871c-17dfcf1ed6b2",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h4",
+      "targets": [
+        ["css=h4", "css"],
+        ["//div[@id='content']/div/div/ul/li/h4", "xpath:idRelative"],
+        ["//h4", "xpath:position"]
+      ],
+      "value": "Branch Address: 636 Vine Hill Way,Hobart ,TAS,AUS"
+    }, {
+      "id": "ca3d4be8-9e23-4699-bdf0-1318e6708ae4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h5",
+      "targets": [
+        ["css=h5", "css"],
+        ["//div[@id='content']/div/div/ul/li/h5", "xpath:idRelative"],
+        ["//h5", "xpath:position"]
+      ],
+      "value": "Phone Number: 1 (11) 543 535-0182"
+    }]
+  }, {
+    "id": "5f698d32-fb8d-49e9-9b21-019bf818c755",
+    "name": "BranchDetailsTest_MultiElementResult",
+    "commands": [{
+      "id": "a709508e-f3c3-45a7-85df-9a78f1c8b4b0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "76cfbc78-0856-415e-bd9b-f9948ecdcc1b",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//select[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dbeef2fc-667a-4a03-8b1c-78b3696c7e1c",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=New South Wales"
+    }, {
+      "id": "2061e4eb-f0aa-4b18-aedc-7e0041a290a2",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"New South Wales\"]",
+      "targets": [
+        ["css=option[value=\"New South Wales\"]", "css"],
+        ["xpath=//option[@value='New South Wales']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "26ab1f79-6b4d-4c32-bf71-d45b71106399",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "987a6b97-59bf-4ab5-96ec-fef0b2220e6d",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='content']/div/div/ul/li[2]/h3",
+      "targets": [
+        ["//div[@id='content']/div/div/ul/li[2]/h3", "xpath:idRelative"],
+        ["//li[2]/h3", "xpath:position"]
+      ],
+      "value": "Coffs Harbour_store"
+    }, {
+      "id": "1d0a82df-1735-473d-86bc-6929ab825232",
+      "comment": "",
+      "command": "assertText",
+      "target": "//div[@id='content']/div/div/ul/li[3]/h3",
+      "targets": [
+        ["//div[@id='content']/div/div/ul/li[3]/h3", "xpath:idRelative"],
+        ["//li[3]/h3", "xpath:position"]
+      ],
+      "value": "Darlinghurst_store"
+    }]
+  }, {
+    "id": "6158ca4d-0e27-452b-b714-6d57ef9baa16",
+    "name": "BranchDetailsTest_NoStore_SouthAustralia",
+    "commands": [{
+      "id": "6e2ab41f-2b0c-40d3-be11-4a74ca5a95f7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/BranchDetails/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "95ad2943-92d1-4e9d-a03b-a4e5436b495b",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_Suburb",
+      "targets": [
+        ["id=id_Suburb", "id"],
+        ["name=Suburb", "name"],
+        ["css=#id_Suburb", "css"],
+        ["xpath=//select[@id='id_Suburb']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0e542d5-b0fc-438d-82e6-df394e6fd9b3",
+      "comment": "",
+      "command": "select",
+      "target": "id=id_Suburb",
+      "targets": [],
+      "value": "label=Western Australia"
+    }, {
+      "id": "f5ba52f0-0ab1-4886-9a1c-3fa2eddb8d46",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"Western Australia\"]",
+      "targets": [
+        ["css=option[value=\"Western Australia\"]", "css"],
+        ["xpath=//option[@value='Western Australia']", "xpath:attributes"],
+        ["xpath=//select[@id='id_Suburb']/option[5]", "xpath:idRelative"],
+        ["xpath=//option[5]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8fa02a34-f776-49da-8644-c1685a1c8c9b",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/form/div/button", "xpath:idRelative"],
+        ["xpath=//form/div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "75784864-7aac-4b34-a4ea-beec9178010c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=p",
+      "targets": [
+        ["css=p", "css"],
+        ["//div[@id='content']/div/p", "xpath:idRelative"],
+        ["//p", "xpath:position"]
+      ],
+      "value": "There are no branches in the state!"
+    }]
+  }, {
+    "id": "ad015756-be93-48eb-8290-b2cc3a4b3d64",
+    "name": "CarFeatureAnalysisTest_ElementsPresent",
+    "commands": [{
+      "id": "d412125b-4b9f-4bf9-a3fb-e5ad34660e53",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarFeatureAnalysis/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72a6634a-0dcf-498e-860c-068dd55bcc0a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.radio-inline",
+      "targets": [
+        ["css=label.radio-inline", "css"],
+        ["//div[@id='content']/div/div/div/label", "xpath:idRelative"],
+        ["//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05ce2c56-5f96-4d6c-9ba7-cfa0265b0aba",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//div[@id='content']/div/div/div/label[2]",
+      "targets": [
+        ["//div[@id='content']/div/div/div/label[2]", "xpath:idRelative"],
+        ["//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "542964c5-ffb6-486a-99a4-4e616cef1252",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_CarFeature",
+      "targets": [
+        ["id=id_CarFeature", "id"],
+        ["name=CarFeature", "name"],
+        ["css=#id_CarFeature", "css"],
+        ["//select[@id='id_CarFeature']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div/select", "xpath:idRelative"],
+        ["//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d63e329-bf1f-41d2-9f82-b1199450a19a",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=id_StoreSeach",
+      "targets": [
+        ["id=id_StoreSeach", "id"],
+        ["name=StoreSeach", "name"],
+        ["css=#id_StoreSeach", "css"],
+        ["//input[@id='id_StoreSeach']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div[2]/input", "xpath:idRelative"],
+        ["//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec8e2996-2f0d-4066-865c-2dbddad149bf",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["//button[@type='submit']", "xpath:attributes"],
+        ["//div[@id='content']/div/div/div/form/div[3]/button", "xpath:idRelative"],
+        ["//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "0876feee-fd29-4abe-8111-6a07fdc347f4",
+    "name": "CarFeatureAnalysis_defaults",
+    "commands": [{
+      "id": "4fd60531-a0ea-4f54-b510-c29a539d2665",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:8000/CRC_APP/CarFeatureAnalysis/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f4fe39ff-30b2-44f4-ac9d-2a9eb35b4561",
+      "comment": "",
+      "command": "click",
+      "target": "css=label.radio-inline",
+      "targets": [
+        ["css=label.radio-inline", "css"],
+        ["xpath=//div[@id='content']/div/div/div/label", "xpath:idRelative"],
+        ["xpath=//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7b99f3a-678a-405b-b55b-6507330e197c",
+      "comment": "",
+      "command": "click",
+      "target": "id=id_CarFeature",
+      "targets": [
+        ["id=id_CarFeature", "id"],
+        ["name=CarFeature", "name"],
+        ["css=#id_CarFeature", "css"],
+        ["xpath=//select[@id='id_CarFeature']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/form/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0915f40b-570d-48c3-9a7c-1e7a82919414",
+      "comment": "",
+      "command": "click",
+      "target": "css=option[value=\"CarMake\"]",
+      "targets": [
+        ["css=option[value=\"CarMake\"]", "css"],
+        ["xpath=//option[@value='CarMake']", "xpath:attributes"],
+        ["xpath=//select[@id='id_CarFeature']/option", "xpath:idRelative"],
+        ["xpath=//option", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c0e8310-66dc-429a-b4ab-3726ca70bb81",
+      "comment": "",
+      "command": "click",
+      "target": "css=button.btn.btn-success",
+      "targets": [
+        ["css=button.btn.btn-success", "css"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='content']/div/div/div/form/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7b063a1a-0145-4deb-bf54-37d031a2a3f3",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0041ca14-dc6b-438a-81ec-c2ada6cd5898",
+    "name": "VehicleDataComparisonTest",
+    "commands": [{
+      "id": "0a260369-91f2-4747-bff2-255391bf219b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb3dd87c-7b8a-4ede-ba02-bf507decb12d",
+      "comment": "",
+      "command": "assertEditable",
+      "target": "id=branchFilter",
+      "targets": [
+        ["id=branchFilter", "id"],
+        ["css=#branchFilter", "css"],
+        ["//input[@id='branchFilter']", "xpath:attributes"],
+        ["//table[@id='resultsTable']/tbody/tr/th/div/input", "xpath:idRelative"],
+        ["//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cd0c736d-c51b-453f-a93b-482f81011770",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[12]/td",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[12]/td", "xpath:idRelative"],
+        ["//tr[12]/td", "xpath:position"]
+      ],
+      "value": "Bendigo_store"
+    }, {
+      "id": "c9ae073f-8688-41ad-b279-2d55ccf12147",
+      "comment": "",
+      "command": "assertText",
+      "target": "//table[@id='resultsTable']/tbody/tr[2]/td[2]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["//td[2]", "xpath:position"]
+      ],
+      "value": "2005"
+    }, {
+      "id": "5bfe5330-eaa5-4f25-8f98-eaee7f5f61f1",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.radio",
+      "targets": [
+        ["css=label.radio", "css"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label", "xpath:idRelative"],
+        ["//label", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e307b6cc-b8a8-49d0-b3ee-d80852c3540d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[2]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[2]", "xpath:idRelative"],
+        ["//label[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e7c41bf7-0295-4906-9dfa-17ff6d317506",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[3]",
+      "targets": [
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[3]", "xpath:idRelative"],
+        ["//label[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3efa1827-2a18-43df-b117-6f401740d13d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=label.checkbox",
+      "targets": [
+        ["css=label.checkbox", "css"],
+        ["//table[@id='resultsTable']/tbody/tr/th[4]/div/div/label[4]", "xpath:idRelative"],
+        ["//label[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "610c0133-01be-4068-b619-e2a4c2732897",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=svg",
+      "targets": [
+        ["css=svg", "css"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a260ed05-162c-4996-9e93-4aeb13f0e635",
+    "name": "BranchOverviewTestCases",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01dce7ec-9b50-40d8-81c9-03702606730c", "5f5aa108-16c9-4a56-bf8a-68bb6f824691", "747da87e-c002-4285-a676-2482fd5d9c9d", "04b713b2-bf93-4728-bc17-b49398700339"]
+  }, {
+    "id": "b8d77345-ec85-4c09-b316-cba4fb3ff875",
+    "name": "AllTestCases",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["01dce7ec-9b50-40d8-81c9-03702606730c", "5f5aa108-16c9-4a56-bf8a-68bb6f824691", "747da87e-c002-4285-a676-2482fd5d9c9d", "04b713b2-bf93-4728-bc17-b49398700339", "bd144fc9-aade-4a84-b9c1-e8e65e84e93e", "5f698d32-fb8d-49e9-9b21-019bf818c755", "6158ca4d-0e27-452b-b714-6d57ef9baa16", "6b661c3e-39f6-4c67-a310-62ee7f92aa31"]
+  }, {
+    "id": "92887ad4-5f13-49f0-8229-b926a0851b33",
+    "name": "BranchDetailsTests",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["bd144fc9-aade-4a84-b9c1-e8e65e84e93e", "6b661c3e-39f6-4c67-a310-62ee7f92aa31", "6158ca4d-0e27-452b-b714-6d57ef9baa16", "5f698d32-fb8d-49e9-9b21-019bf818c755"]
+  }, {
+    "id": "8c6a07f5-7fb7-4b9c-a66f-9e6e42ff2870",
+    "name": "VehicleDataComparison",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0041ca14-dc6b-438a-81ec-c2ada6cd5898"]
+  }],
+  "urls": ["http://localhost:8000/"],
+  "plugins": []
+}

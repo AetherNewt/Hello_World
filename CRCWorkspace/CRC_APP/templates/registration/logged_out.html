@@ -1,0 +1,9 @@
+{% extends "CRC_APP/template.html" %}
+
+{% block title %}Log out{% endblock %}
+
+{% block content %}
+    <p>You have logged out successfully</p>
+    <a href="{% url 'login' %}">Cick here to login again.</a>
+
+{% endblock %}
